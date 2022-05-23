@@ -167,8 +167,7 @@ hr{
 }
 
 .area{
-    margin-top: 25px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .area label{
     margin-bottom: 0;
@@ -181,6 +180,49 @@ hr{
 .area textarea{
     width: 90% !important;
     margin-left: 20px !important;
+}
+
+.area table{
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+.area table th{
+    background-color: rgb(71, 70, 70);
+    color: white;
+}
+
+.area table td,th{
+    border: 1px solid #9a9a91;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Segundo Row*/
+
+.equipo{
+    height: 300px;
+    width: 100% !important;
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #b5b0b0;
+    border-top: 2px solid #b5b0b0;
+    border-right:2px solid #b5b0b0;
+    border-left: 2px solid #b5b0b0;
+    left: 90px;
+}
+
+.equipo p{
+    position: absolute !important;
+    left: 36%;
+    bottom: 266px;
+    background: white;
+    padding: 4px 16px;
+    user-select: none;
 }
 
 @media screen and (max-width:992px) {
