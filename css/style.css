@@ -306,6 +306,7 @@ hr{
         right: 0;
     }
 
+    /*flex-direction: column; para bajar una columna a modo vertical*/
     .row{
         flex-direction: column;
     }
