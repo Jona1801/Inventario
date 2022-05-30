@@ -7,7 +7,7 @@
 }
 
 section{
-    margin: 20px;
+    margin: 30px;
     border-bottom: 2px solid rgb(165, 165, 165);
     border-top: 2px solid #b5b0b0;
     border-left: 2px solid #b5b0b0;
@@ -265,7 +265,7 @@ hr{
     left: 10px;
     color: #1a1515;
     border-right: 1px solid #1a1515;
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 .search input::placeholder{color: rgb(109, 103, 103);}
@@ -347,7 +347,7 @@ hr{
 .b-quitar{
     text-decoration: none;
     padding: 4px 8px;
-    border: 1px solid #83d2e5;
+    border: 1px solid rgb(110 187 231 / 58%);
     background-color: transparent;
     color: #1a1515;
     border-radius: 10px;
@@ -453,7 +453,7 @@ hr{
 .btn-agregar{
     text-decoration: none;
     padding: 4px 10px;
-    border: 1px solid #83d2e5;
+    border: 1px solid rgb(110 187 231 / 58%);
     background: transparent;
     color: #1a1515;
     border-radius: 10px;
