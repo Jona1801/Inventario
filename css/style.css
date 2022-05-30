@@ -465,20 +465,70 @@ hr{
     color: white;
     border: 1px solid #a7a79b;
 }
+
+/*Parte responsiva para Laptops*/
+@media screen and (max-width:1400px){
+    .caja{
+        right: 65px;
+        max-width: 500px;
+    }
+
+    .caja2{
+        right: 65px;
+        max-width: 500px;
+    }
+
+    .equipo{
+        left: 10px;
+        max-width: 700px;
+    }
+    .equipo .area-equipos label{
+        right: 270px !important;
+    }
+
+    .area-equipos table{
+        max-width: 650px;
+    }
+    
+    .contenedor{
+        max-width: 600px;
+        margin-left: 10px;
+    }
+
+    .contenedor.cont-area{
+        width: 200px;
+        height: 120px;
+    }
+
+    .contenedor .periodo input {
+        padding: 1px 4px;
+        border-radius: 12px;
+    }
+
+    .agregar{
+        margin-left: 18px;
+    }
+}
+
 /*Parte responsiva para Tablets*/
+
 @media screen and (max-width:1200px) {
+
     .caja{
         justify-content: center;
         right: 0;
+        max-width: 600px;
         
     }
 
     .caja2{
         right: 0;
+        max-width: 600px;
     }
 
 
     .row{
+
         /*flex-direction: column; para bajar una columna a modo vertical*/
         flex-direction: column;
         
@@ -497,13 +547,17 @@ hr{
         left: 0;
         max-width: 960px;
     }
+    .equipo .area-equipos label{
+        right: 290px !important;
+    }
 
     .buscar-equipos{
         position: relative;
         right: 100px;
     }
     .contenedor{
-        width: 800px;
+        max-width: 800px;
+        margin-left: 30px !important;
     }
 
     .contenedor .cont-area textarea{
@@ -519,11 +573,16 @@ hr{
     }
 
     .contenedor .periodo input {
-        padding: 4px 8px;
-        border-radius: 10px;
+        padding: 1px 4px;
+        border-radius: 12px;
+    }
+
+    .agregar{
+        margin-left: 32px;
     }
 }
 
+/*Tablets mas pequeñas*/
 @media screen and (max-width:992px) {
     .caja{
         right: 0;
@@ -550,6 +609,9 @@ hr{
     .equipo label{
         right: 270px;
     }
+    .equipo .area-equipos label{
+        right: 250px !important;
+    }
 
     .buscar-equipos{
         right: 40px;
@@ -557,6 +619,7 @@ hr{
 
     .contenedor{
         max-width: 690px;
+        margin-left: 0 !important;
     }
     .contenedor .cont-area{
         width: 245px;
