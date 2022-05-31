@@ -70,7 +70,7 @@ section{
 .buscadores{
     display: flex;
     padding: 30px;
-    letter-spacing: 1px;
+    
 }
 
 .buscadores select{
@@ -148,7 +148,7 @@ hr{
 
 .info{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .info i{
@@ -159,8 +159,7 @@ hr{
 }
 
 .info ul li{
-    font-size: 17px;
-    text-align: center;
+    font-size: 18px;
     position: relative;
     top: 70px;
     margin: 2px;
@@ -175,7 +174,7 @@ hr{
 }
 .area label{
     margin-bottom: 0;
-    right: 160px;
+    right: 205px;
     position: relative;
     font-size: 12px;
     font-weight: 500;
@@ -188,8 +187,8 @@ hr{
 
 .area table{
     margin-top: 8px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    width: 540px;
     border-collapse: collapse;
     border-left: 2px solid #f9fafb;
     border-right: 2px solid #f9fafb;
@@ -260,6 +259,7 @@ hr{
 
 .search-1 i{
     position: absolute;
+    font-size: 17px;
     top: 12px;
     transform: translateY(-39%);
     left: 10px;
@@ -294,6 +294,7 @@ hr{
 }
 
 .search i{
+    font-size: 17px;
     position: absolute;
     top: 12px;
     transform: translateY(-39%);
@@ -307,22 +308,23 @@ hr{
 
 .area-equipos{
     height: 420px;
-    padding-top: 30px;
+    padding-top: 65px;
 }
 
 .area-equipos label{
+    margin-bottom: 0;
     position: relative;
-    right: 300px;
+    right: 303px;
     font-size: 12px;
     font-weight: 500;
-    top: 55px;
+    
 }
 
 /*Segunda tabla*/
  .equipo table{
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 10px;
+    margin: auto;
+    width: 740px;
     border-collapse: collapse;
     border-left: 2px solid #f9fafb;
     border-right: 2px solid #f9fafb;
@@ -352,6 +354,7 @@ hr{
     color: #1a1515;
     border-radius: 10px;
     transition: .5s;
+    cursor: pointer;
 }
 
 .b-quitar:hover{
@@ -458,10 +461,11 @@ hr{
     color: #1a1515;
     border-radius: 10px;
     transition: .54s;
+    cursor: pointer;
 }
 
 .btn-agregar:hover{
-    background-color: #83d2e5;
+    background-color: rgb(110 187 231);
     color: white;
     border: 1px solid #a7a79b;
 }
@@ -469,18 +473,25 @@ hr{
 /*Parte responsiva para Laptops*/
 @media screen and (max-width:1400px){
     .caja{
-        right: 65px;
+        right: 1px;
         max-width: 500px;
     }
 
     .caja2{
-        right: 65px;
+        right: 1px;
         max-width: 500px;
+    }
+
+    .area label{
+        right: 160px;
+    }
+    .area table{
+        max-width: 455px;
     }
 
     .equipo{
         left: 10px;
-        max-width: 700px;
+        max-width: 718px;
     }
     .equipo .area-equipos label{
         right: 270px !important;
@@ -526,6 +537,13 @@ hr{
         max-width: 600px;
     }
 
+    .area label{
+        right: 205px;
+    }
+    .area table{
+        max-width: 550px;
+    }
+
 
     .row{
 
@@ -547,8 +565,11 @@ hr{
         left: 0;
         max-width: 960px;
     }
+    .equipo .area-equipos table{
+        max-width: 740px;
+    }
     .equipo .area-equipos label{
-        right: 290px !important;
+        right: 295px !important;
     }
 
     .buscar-equipos{
@@ -612,7 +633,9 @@ hr{
     .equipo .area-equipos label{
         right: 250px !important;
     }
-
+    .equipo .area-equipos table {
+        max-width: 500px;
+    }
     .buscar-equipos{
         right: 40px;
     }
@@ -637,6 +660,44 @@ hr{
     }
     .agregar{
         margin-left: 40px;
+    }
+    
+}
+
+/*Medidas para Celular*/
+
+@media screen and (max-width:500px) {
+    section{
+        margin: 10px;
+    }
+
+    .caja{
+        max-width: 365px;
+    }
+
+    .caja2{
+        max-width: 365px;
+    }
+
+    .caja2 p{
+        position: absolute;
+        left: 17%;
+    }
+
+    .area label{
+        right: 5px;
+    }
+
+    .area table{
+        max-width: 340px;
+    }
+
+    .buscar-equipos{
+        position: initial;
+    }
+    .equipo{
+        
+        max-width: 365px;
     }
     
 }
