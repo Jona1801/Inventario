@@ -473,12 +473,12 @@ hr{
 /*Parte responsiva para Laptops*/
 @media screen and (max-width:1400px){
     .caja{
-        right: 1px;
+        right: 60px;
         max-width: 500px;
     }
 
     .caja2{
-        right: 1px;
+        right: 60px;
         max-width: 500px;
     }
 
@@ -490,15 +490,16 @@ hr{
     }
 
     .equipo{
-        left: 10px;
-        max-width: 718px;
+        left: 0;
+        right: 10px;
+        max-width: 704px;
     }
     .equipo .area-equipos label{
         right: 270px !important;
     }
 
     .area-equipos table{
-        max-width: 650px;
+        max-width: 675px;
     }
     
     .contenedor{

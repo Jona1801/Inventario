@@ -105,7 +105,7 @@
                         <p>Buscar Equipo</p>
 
                         <div class="search">
-                            <input type="text" placeholder="Search here...">
+                            <input type="text" id="input2" placeholder="Search here...">
                             <i class="bi bi-search"></i>
                         </div>
 
@@ -124,12 +124,12 @@
                                     
                                 </tr>
 
-                                <tbody>
+                                <tbody id="tabla2">
                                     <tr id="fila1">
                                         <td>1</td>
                                         <td>Laptops</td>
-                                        <td>002530</td>
-                                        <td>180199</td>
+                                        <td>001510</td>
+                                        <td>899099</td>
                                         <td>Laptop HP</td>
                                         <td>Notebook</td>
                                         <td><a  id="quitar1" class="b-quitar">Quitar</a></td>
@@ -139,7 +139,7 @@
                                         <td>2</td>
                                         <td>Laptops</td>
                                         <td>002530</td>
-                                        <td>180199</td>
+                                        <td>228099</td>
                                         <td>Laptop Lenovo</td>
                                         <td>Notebook</td>
                                         <td><a  id="quitar2" class="b-quitar">Quitar</a></td>
@@ -147,18 +147,18 @@
                                     <tr id="fila3">
                                         <td>3</td>
                                         <td>Laptops</td>
-                                        <td>002530</td>
-                                        <td>180199</td>
-                                        <td>Laptop Lenovo</td>
+                                        <td>0050</td>
+                                        <td>3338099</td>
+                                        <td>Laptop Dell</td>
                                         <td>Notebook</td>
                                         <td><a  id="quitar3" class="b-quitar">Quitar</a></td>
                                     </tr>
                                     <tr id="fila4">
                                         <td>4</td>
                                         <td>Laptops</td>
-                                        <td>002530</td>
-                                        <td>180199</td>
-                                        <td>Laptop Lenovo</td>
+                                        <td>005550</td>
+                                        <td>448099</td>
+                                        <td>Laptop MAC</td>
                                         <td>Notebook</td>
                                         <td><a  id="quitar4" class="b-quitar">Quitar</a></td>
                                     </tr>
@@ -206,7 +206,17 @@
             $('#quitar4').click(function(){
                 $('#fila4').remove();
             });
-        })
+        });
+
+        $(document).ready(function(){
+        $("#input2").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#tabla2 tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+        });
+
     </script>
 
 </body>
