@@ -59,10 +59,10 @@ section{
 
 .caja p{
     position: absolute;
-    left: 42%;
-    bottom: 68px;
+    left: 2%;
+    bottom: 70.5px;
     background: white;
-    padding: 4px 16px;
+    padding: 0 2px;
     user-select: none;
     
 }
@@ -70,6 +70,7 @@ section{
 .buscadores{
     display: flex;
     padding: 30px;
+    margin-top: 4px;
     
 }
 
@@ -81,6 +82,7 @@ section{
     border: 1px solid #9a9a91;
     text-align: justify;
     outline: none;
+    
 }
 
 .buscadores input{
@@ -131,10 +133,10 @@ hr{
     font-size: 20px;
     font-weight: 500;
     user-select: none;
-    left: 30%;
-    bottom: 515px;
+    left: 2%;
+    bottom: 522px;
     background-color: white;
-    padding: 8px 15px;
+    padding: 0 4px;
     
 }
 
@@ -228,10 +230,10 @@ hr{
 
 .equipo p{
     position: absolute !important;
-    left: 42%;
-    bottom: 430px;
+    left: 2%;
+    bottom: 434px;
     background: white;
-    padding: 4px 10px;
+    padding: 0 4px;
     user-select: none;
     
 }
@@ -426,17 +428,17 @@ hr{
 
 .contenedor .periodos p{
     position: absolute !important;
-    padding: 2px 10px;
+    padding: 0 4px;
     background: white;
-    left: 34%;
-    bottom: 119px;
+    left: 2%;
+    bottom: 121px;
     user-select: none;
 }
 
 .contenedor .periodo{
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-top: 18px;
     margin-left: 20px;
 }
 
@@ -450,7 +452,7 @@ hr{
 }
 
 .agregar{
-    margin-top: 60px;
+    margin-top: 70px;
     margin-right: 15px;
 }
 .btn-agregar{
