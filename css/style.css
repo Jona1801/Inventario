@@ -15,6 +15,7 @@
     border-top: 2px solid #b5b0b0;
     border-left: 2px solid #b5b0b0;
     border-right: 2px solid #b5b0b0;
+    background-color: white;
 }
 
 .cabecera{
@@ -49,7 +50,7 @@
 .prestamo-fil{
     background-color: #fff;
     height: 100px;
-    width: 550px !important;
+    width: 650px !important;
     margin-top: 25px;
     border-radius: 10px;
 }
@@ -77,8 +78,9 @@
     padding: 5px 25px;
     border-radius: 10px;
     border: 1px solid #9a9a91;
-    text-align: center;
+    text-align: justify;
     outline: none;
+    margin-left: 20px;
     
 }
 
@@ -91,20 +93,27 @@
     text-align: center;
 }
 
+.buscar-pres{
+    margin-top: 13px;
+    position: relative;
+    right: 95px;
+
+}
+
 .buscadores-prestamos a{
-    background-color: #83d2e5;
-    color: #231d1de6;
-    border: 1px solid #9a9a9a;
+    background-color: transparent;
+    color: #1a1515;
+    border: 1px solid rgb(36 31 31 / 75%);
     border-radius: 10px;
     padding: 2px 10px;
     text-decoration: none;
-    transition: 1s;
+    transition: .5s;
 }
 
 .buscadores-prestamos a:hover{
-    background-color: #fff;
-    color: black;
-    border: 1px solid #83d2e5;
+    background-color: rgb(110 187 231);
+    color: white;
+    border: 1px solid #9a9a91;
 }
 
 .prestamos-caja2{
@@ -228,7 +237,6 @@
     position: relative;
     width: 300px;
     height: 40px;
-    margin-right: 80px;
     left: 35px;
 }
 
@@ -253,7 +261,6 @@
     transform: translateY(-39%);
     left: 10px;
     color: #1a1515;
-    border-right: 1px solid #1a1515;
     padding-right: 5px;
 }
 
@@ -289,11 +296,32 @@
     transform: translateY(-39%);
     left: 10px;
     color: #1a1515;
-    border-right: 1px solid #1a1515;
     padding-right: 10px;
 }
 
 .search input::placeholder{color: rgb(109, 103, 103);}
+
+.buscar-pres-e{
+    position: relative;
+    left: 310px;
+    margin-top: 5px;  
+}
+
+.buscar-pres-e a{
+    padding: 2px 10px;
+    background: transparent;
+    border: 1px solid rgb(36 31 31 / 75%);
+    color: #231d1de6;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.buscar-pres-e a:hover{
+    border: 1px solid #9a9a91;
+    background: rgb(110 187 231);
+    color: white;
+}
 
 .area-equipos{
     height: 420px;
@@ -442,7 +470,7 @@
 .agregar{
     position: relative;
     bottom: 60px;
-    margin-left: 310px;
+    margin-left: 305px;
 }
 .btn-agregar{
     text-decoration: none;
@@ -688,7 +716,7 @@ fieldset{
     }
 
     .area label{
-        left: 55px;
+        left: 20px;
     }
     .area table{
         width: 650px;
@@ -776,103 +804,83 @@ fieldset{
     .periodos legend{
         width: 31%;
     }
+
+    .fechas-prestamos input{
+        padding: 3px 9px;
+    }
+    .buscadores-prestamos select{
+        margin-left: 0;
+    }
+
+    .buscar-pres {
+        margin-top: 12px;
+        position: relative;
+        right: 130px;
+    }
 }
 
 /*Tablets mas pequeñas*/
 @media screen and (max-width:992px) {
-    .caja{
-        right: 0;
-        
+
+    .section-prestamos {
+        max-width: 776px !important;
+        margin: 20px !important;
+        height: auto !important;
+    }
+    .equipo-prestamos fieldset {
+        width: 650px !important;
+    }
+    .area-equipos table{
+        max-width: 610px !important;
     }
 
-    .caja2{
-        right: 0;
+    .area-equipos table th {
+        background-color: rgb(110 187 231 / 58%);
+        color: black;
+        font-size: 14px !important;
+        padding: 4px !important;
+    }
+.area-equipos table td{
+    font-size: 13px;
+}
+    .area-equipos label {
+         left: 20px; 
     }
 
-    .row{
-        flex-direction: column;
+    .area-equipos {
+        padding-top: 50px;
     }
-
-    .equipo{
-        left: 0;
-        max-width: 690px;
-    }
-
-    .equipo p{
-        bottom: 431px;
-    }
-
-    .equipo label{
-        right: 270px;
-    }
-    .equipo .area-equipos label{
-        right: 250px !important;
-    }
-    .equipo .area-equipos table {
-        max-width: 500px;
-    }
-    .buscar-equipos{
-        right: 40px;
-    }
-
-    .contenedor{
-        max-width: 690px;
-        margin-left: 0 !important;
-    }
-    .contenedor .cont-area{
-        width: 245px;
-    }
-    .contenedor .cont-area textarea {
-        margin-left: 60px;
-        height: 135px;
-    }
-
-    .contenedor .periodos{
-        height: 135px;
-    }
-    .contenedor .periodos p{
-        bottom: 105px;
-    }
-    .agregar{
-        margin-left: 40px;
+    .area label {
+        left: 20px;
     }
     
-}
-
-/*Medidas para Celular*/
-
-@media screen and (max-width:500px) {
-    section{
-        margin: 10px;
+    .equipo-prestamos legend {  
+        width: 18.5%;
     }
 
-    .caja{
-        max-width: 365px;
+    .contenedor {
+        width: 700px !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+        margin-bottom: 1.5rem !important;
     }
 
-    .caja2{
-        max-width: 365px;
+    .contenedor .cont-area textarea {
+        width: 400px;
+        position: relative;
+        right: 90px;
+        margin-top: 0;
     }
 
-    .caja2 p{
-        position: absolute;
-        left: 17%;
+    .contenedor .periodos {
+        max-width: 400px !important;
+        margin-top: 20px;
+        padding-top: 10px;
+        margin-right: 150px !important;
     }
-
-    .area label{
-        right: 5px;
-    }
-
-    .area table{
-        max-width: 340px;
-    }
-
-    .buscar-equipos{
-        position: initial;
-    }
-    .equipo{
-        
-        max-width: 365px;
-    }
+    
     
 }
