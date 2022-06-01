@@ -472,6 +472,86 @@ hr{
     border: 1px solid #a7a79b;
 }
 
+/*Estilos para la vista de baja asignaciones*/
+
+.baja-asignaciones section{
+    margin: 40px;
+    border-bottom: 2px solid rgb(165, 165, 165);
+    border-top: 2px solid #b5b0b0;
+    border-left: 2px solid #b5b0b0;
+    border-right: 2px solid #b5b0b0;
+}
+
+.baja-asignaciones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.user-search{
+    position: relative;
+    width: 400px;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    border-top: 2px solid #b5b0b0;
+    border-left: 2px solid #b5b0b0;
+    border-right: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.user-search p{
+    position: absolute;
+    bottom: 198px;
+    left: 2%;
+    background-color: white;
+    padding: 0 4px;
+}
+
+.user-search-select{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.user-search-select select{
+    padding: 6px 25px;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 15px;
+    outline: none;
+    text-align: center;
+}
+
+.user-search-select input{
+    padding: 4px 18px;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid #1a1515;
+}
+
+.user-icon{
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+}
+
+.user-icon a{
+    width: 45px;
+    background: rgb(196, 194, 194);
+    height: 45px;
+    border-radius: 22px;
+    position: relative;
+}
+
+.user-icon  i{
+    position: absolute;
+    font-size: 22px;
+    left: 13px;
+    top: 7px;
+    color: #1a1515;
+}
+
+
 /*Parte responsiva para Laptops*/
 @media screen and (max-width:1400px){
     .caja{
