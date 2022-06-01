@@ -6,8 +6,11 @@
     font-family: sans-serif;
 }
 
-section{
-    margin: 30px;
+.section-prestamos{
+    width: 1650px;
+    height: 900px;
+    margin: auto;
+    margin-top: 50px;
     border-bottom: 2px solid rgb(165, 165, 165);
     border-top: 2px solid #b5b0b0;
     border-left: 2px solid #b5b0b0;
@@ -42,50 +45,44 @@ section{
     color: black;
     border: 1px solid #9a9a91;
 }
-.caja{
-    position: relative;
+
+.prestamo-fil{
     background-color: #fff;
     height: 100px;
-    width: 600px !important;
-    text-align: center;
-    border-bottom: 1px solid #b5b0b0;
-    border-top: 2px solid #b5b0b0;
-    border-right:2px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
-    right: 200px;
+    width: 550px !important;
     margin-top: 25px;
     border-radius: 10px;
 }
 
-.caja p{
-    position: absolute;
-    left: 2%;
-    bottom: 70.5px;
-    background: white;
-    padding: 0 2px;
-    user-select: none;
-    
+.prestamo-fil fieldset{
+    width: 550px;
+    height: 110px;
 }
 
-.buscadores{
+.prestamo-fil legend{
+    font-size: 18px;
+    width: 10% !important;
+    float: none !important;
+    margin-left: 10px !important;
+}
+
+.buscadores-prestamos{
     display: flex;
-    padding: 30px;
-    margin-top: 4px;
+    justify-content: space-around;
     
 }
 
-.buscadores select{
+.buscadores-prestamos select{
     border-radius: 8px;
-    height: 30px;
-    width: 100px;
+    padding: 5px 25px;
     border-radius: 10px;
     border: 1px solid #9a9a91;
-    text-align: justify;
+    text-align: center;
     outline: none;
     
 }
 
-.buscadores input{
+.buscadores-prestamos input{
     border-radius: 10px;
     height: 30px;
     width: 150px;
@@ -94,7 +91,7 @@ section{
     text-align: center;
 }
 
-.buscadores a{
+.buscadores-prestamos a{
     background-color: #83d2e5;
     color: #231d1de6;
     border: 1px solid #9a9a9a;
@@ -104,40 +101,30 @@ section{
     transition: 1s;
 }
 
-.buscadores a:hover{
+.buscadores-prestamos a:hover{
     background-color: #fff;
     color: black;
     border: 1px solid #83d2e5;
 }
-hr{
-    width: 50%;
-    color: azure;
-}
 
-.caja2{
+.prestamos-caja2{
     position:  relative;
-    text-align: center;
     width: 600px;
-    border-bottom: 1px solid #b5b0b0;
-    border-top:2px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
-    border-right: 2px solid #b5b0b0;
-    right: 200px;
     margin-bottom: 12px;
     margin-top: 50px;
     border-radius: 10px;
 }
+.prestamos-caja2 fieldset{
+    width: 550px;
+    height: 600px;
+    border: 2px solid #b5b0b0 ;
+}
 
-.caja2 p {
-    position: absolute !important;
-    font-size: 20px;
-    font-weight: 500;
-    user-select: none;
-    left: 2%;
-    bottom: 522px;
-    background-color: white;
-    padding: 0 4px;
-    
+.prestamos-caja2 legend{
+    font-size: 23px;
+    float: none !important;
+    margin-left: 10px !important;
+    width: 44%;
 }
 
 /*
@@ -176,7 +163,7 @@ hr{
 }
 .area label{
     margin-bottom: 0;
-    right: 205px;
+    left: 7px;
     position: relative;
     font-size: 12px;
     font-weight: 500;
@@ -213,30 +200,30 @@ hr{
 
 /*Segundo Row*/
 
-.equipo{
+.equipo-prestamos{
     
-    width: 800px !important;
+    width: 750px !important;
     position: relative;
     background-color: #fff;
-    text-align: center;
-    border-bottom: 1px solid #b5b0b0;
-    border-top: 2px solid #b5b0b0;
-    border-right:2px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
     left: 90px;
     margin-bottom: 10px;
     border-radius: 8px;
 }
 
-.equipo p{
-    position: absolute !important;
-    left: 2%;
-    bottom: 434px;
-    background: white;
-    padding: 0 4px;
-    user-select: none;
-    
+.equipo-prestamos fieldset{
+    width: 750px;
+    height: 450px;
+    border: 2px solid #9a9a91;
 }
+
+.equipo-prestamos legend{
+    float: none !important;
+    font-size: 18px;
+    margin-left: 10px;
+    width: 16%;
+
+}
+
 .search-1{
     position: relative;
     width: 300px;
@@ -316,14 +303,14 @@ hr{
 .area-equipos label{
     margin-bottom: 0;
     position: relative;
-    right: 303px;
+    left: 8px;
     font-size: 12px;
     font-weight: 500;
     
 }
 
 /*Segunda tabla*/
- .equipo table{
+ .area-equipos table{
     margin-top: 10px;
     margin: auto;
     width: 740px;
@@ -333,15 +320,15 @@ hr{
     user-select: none;
 }
 
- .equipo table th{
+.area-equipos table th{
     background-color: rgb(110 187 231 / 58%);
     color: black;
     font-size: 14px;
     padding: 10px 15px;
+
 }
 
-.equipo table td{
-    
+.area-equipos table td{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -392,11 +379,12 @@ hr{
     border-left: 2px solid #b5b0b0;
     border-top: 2px solid #b5b0b0;
     border-radius: 10px;
-    margin-left: 100px;
+    margin-left: 80px;
     width: 290px;
-    height: 150px;;
+    height: 158px;;
     text-align: justify;
     padding: 10px;
+    margin-top: 24px;
 }
 
 #miid::placeholder {
@@ -416,34 +404,34 @@ hr{
     position: relative;
     display: flex;
     justify-content: space-between;
-    border-right: 2px solid #b5b0b0;
-    border-bottom: 1px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
-    border-top: 2px solid #b5b0b0;
-    height: 150px;
-    width: 800px !important;
+    height: 170px;
+    width: 400px !important;
     border-radius: 10px;
-    margin-left: 115px;
-}
-
-.contenedor .periodos p{
-    position: absolute !important;
-    padding: 0 4px;
-    background: white;
-    left: 2%;
-    bottom: 121px;
-    user-select: none;
-}
-
-.contenedor .periodo{
-    display: flex;
-    flex-direction: column;
-    margin-top: 18px;
     margin-left: 20px;
 }
 
+.periodos fieldset{
+    height: 172px;
+    width: 400px;
+    border: 2px solid #b5b0b0;
 
-.contenedor .periodo input{
+}
+
+.periodos legend{
+    font-size: 18px;
+    float: none;
+    margin-left: 10px;
+    width: 32%;
+}
+.fechas-prestamos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    margin-right: 120px;
+}
+
+
+.fechas-prestamos input{
     padding: 6px 15px;
     border-radius: 8px;
     border: 1px solid #1a1515;
@@ -452,8 +440,9 @@ hr{
 }
 
 .agregar{
-    margin-top: 70px;
-    margin-right: 15px;
+    position: relative;
+    bottom: 60px;
+    margin-left: 310px;
 }
 .btn-agregar{
     text-decoration: none;
@@ -474,36 +463,56 @@ hr{
 
 /*Estilos para la vista de baja asignaciones*/
 
-.baja-asignaciones section{
-    margin: 40px;
+body .section-asign {
+    max-width: 1450px;
+    margin: auto;
+    margin-top: 100px;
     border-bottom: 2px solid rgb(165, 165, 165);
     border-top: 2px solid #b5b0b0;
     border-left: 2px solid #b5b0b0;
     border-right: 2px solid #b5b0b0;
 }
 
-.baja-asignaciones{
+
+.cabecera-asign{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+.cabecera-asign h1{
+    text-decoration: none;
+    user-select: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.baja-asign{
     display: flex;
     justify-content: space-around;
+    padding-top: 30px;
 }
 
-.user-search{
-    position: relative;
+.user-fieldset{
     width: 400px;
-    border-bottom: 1px solid rgb(165, 165, 165);
-    border-top: 2px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
-    border-right: 2px solid #b5b0b0;
-    border-radius: 10px;
+    height: 200px;
 }
 
-.user-search p{
-    position: absolute;
-    bottom: 198px;
-    left: 2%;
-    background-color: white;
-    padding: 0 4px;
+
+fieldset{
+    border: 2px solid #b5b0b0  !important;
+    margin: 10px !important;
+    border-radius: 10px;
+    height: 150px;
 }
+
+.user-fieldset legend{
+    font-size: 17px !important;
+    float: none !important;
+    width: 26% !important;
+    margin-left: 10px !important;
+}
+
+
 
 .user-search-select{
     display: flex;
@@ -521,12 +530,12 @@ hr{
 }
 
 .user-search-select input{
-    padding: 4px 18px;
+    padding: 4px 16px;
     border-radius: 12px;
     margin: auto;
     margin-top: 10px;
     outline: none;
-    border: 1px solid #1a1515;
+    border: 1px solid #1a1515;;;
 }
 
 .user-icon{
@@ -541,6 +550,8 @@ hr{
     height: 45px;
     border-radius: 22px;
     position: relative;
+    transition: .5s;
+    box-shadow: 0px 5px 5px #9a9a9a;
 }
 
 .user-icon  i{
@@ -549,6 +560,51 @@ hr{
     left: 13px;
     top: 7px;
     color: #1a1515;
+}
+
+.user-icon a:hover{
+    background-color: rgb(110 187 231 / 58%);
+}
+
+.user-detail{
+    position: relative;
+    width: 700px;
+    border-top: 2px solid #b5b0b0;;
+    border-bottom:1px solid #b5b0b0;;
+    border-left: 2px solid #b5b0b0;;
+    border-right: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.user-detail p{
+    position: absolute;
+    left: 2%;
+    bottom: 254px;
+    background: white;
+    padding: 0 4px;
+}
+
+.user-details{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    padding: 35px;
+}
+
+.user-details i{
+    position: relative;
+    font-size: 85px;
+    right: 70px; 
+    top: 10px;                   
+}
+
+.user-details ul li{
+    font-size: 18px;
+    position: relative;
+    margin: 2px;
+    padding: 2px 20px;
+    list-style: none;
+    left: 40px;
 }
 
 
@@ -565,10 +621,10 @@ hr{
     }
 
     .area label{
-        right: 160px;
+        left: 10px;
     }
     .area table{
-        max-width: 455px;
+        max-width: 525px;
     }
 
     .equipo{
@@ -581,11 +637,14 @@ hr{
     }
 
     .area-equipos table{
-        max-width: 675px;
+        max-width: 710px;
     }
     
+    .area-equipos label{
+        left: 19px;
+    }
     .contenedor{
-        max-width: 600px;
+
         margin-left: 10px;
     }
 
@@ -600,13 +659,21 @@ hr{
     }
 
     .agregar{
-        margin-left: 18px;
+        margin-left: 310px;
     }
+
+    
 }
 
 /*Parte responsiva para Tablets*/
 
 @media screen and (max-width:1200px) {
+
+    .section-prestamos{
+        max-width: 1142px !important;
+        margin: 20px !important;
+        height: auto !important;
+    }
 
     .caja{
         justify-content: center;
@@ -621,18 +688,17 @@ hr{
     }
 
     .area label{
-        right: 205px;
+        left: 55px;
     }
     .area table{
-        max-width: 550px;
+        width: 650px;
+        max-width: 612px;
     }
-
 
     .row{
 
         /*flex-direction: column; para bajar una columna a modo vertical*/
         flex-direction: column;
-        
     }
 
     .container{
@@ -644,6 +710,23 @@ hr{
         margin-right: 0px;
     }
 
+    .prestamo-fil fieldset {
+        width: 650px;
+    }
+    
+    .prestamo-fil legend{
+        width: 9% !important;
+    }
+    .prestamos-caja2 legend{
+        width: 37.5%;
+    }
+
+    .prestamos-caja2 fieldset{
+        width: 650px;
+    }
+    .equipo-prestamos{
+        left: 0px;
+    }
     .equipo{
         left: 0;
         max-width: 960px;
@@ -660,12 +743,13 @@ hr{
         right: 100px;
     }
     .contenedor{
-        max-width: 800px;
+        max-width: 750px;
         margin-left: 30px !important;
     }
 
     .contenedor .cont-area textarea{
         margin-left: 0;
+        margin-right: 10px;
     }
 
     .contenedor .periodos {
@@ -676,13 +760,21 @@ hr{
         margin-left: 0;
     }
 
+    .periodos fieldset{
+        width: 416px;
+    }
+
     .contenedor .periodo input {
         padding: 1px 4px;
         border-radius: 12px;
     }
 
     .agregar{
-        margin-left: 32px;
+        margin-left: 320px;
+    }
+
+    .periodos legend{
+        width: 31%;
     }
 }
 
