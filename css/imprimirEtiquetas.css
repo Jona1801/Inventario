@@ -1,0 +1,114 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+/*Imprimir Etiquetas*/
+
+.contenedor-principal-ie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.section-ie{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 20px;
+    border-right: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-top: 1px solid #b5b0b0;
+    border-bottom: 1px solid #b5b0b0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+
+}
+
+.cabecera-ie{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.cabecera-ie h1{
+   text-decoration: none;
+   user-select: none;
+   font-size: 22px;
+   font-weight: 500;
+   color: #7a7a78; 
+}
+
+.botonCerrar-ie{
+    width: 45px;
+    height: 32px;
+    background-color: rgb(248, 86, 86);
+    color: white;
+    border: 1px solid #a7a79b;
+    border-radius: 12px;
+    transition: .4s;
+}
+
+.section-imprimir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.section-imprimir fieldset{
+    width: 280px;
+    height: 250px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.section-imprimir fieldset legend{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.input-btn-ie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input-btn-ie input{
+    margin-top: 10px;
+    outline: none;
+    padding: 9px;
+    border-radius: 10px;
+    border: 1px solid #1a151599;
+    font-size: 16px;
+}
+
+.input-btn-ie button{
+    margin-top: 30px;
+    padding: 7px 17px;
+    background-color: white;
+    border-radius: 18px;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .4s;
+}
+
+#btn-imprimir:hover{
+    background-color: rgb(110 187 231 / 58%);
+}

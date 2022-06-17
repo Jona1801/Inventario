@@ -1,0 +1,264 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/*Estilos de consulta de prestamos*/
+
+.contenedor-principal-cp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.section-consultaPres{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    border-top: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-right: 1px solid #b5b0b0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+}
+
+.cabecera-consultaPres{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.cabecera-consultaPres h1{
+    text-decoration: none;
+    user-select: none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #7a7a78;
+}
+
+.botonCerrar{   
+    width: 45px;height: 32px;
+    background-color: rgb(248, 86, 86);
+    border: 1px solid #a7a79b;
+    color: white;
+    border-radius: 12px;
+    transition: .3s;
+
+}
+
+.consulta-prestamo{
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-consultaPres{
+    height: 240px;
+    width: 400px;
+    margin-right: 15px;
+}
+
+.contenido-consultaPres fieldset{
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+    height: 240px;
+}
+
+.contenido-consultaPres fieldset legend{
+    font-size: 18px;
+    float: none;
+    width: 14.7%;
+    margin-left: 10px;
+}
+
+.search-consultaPres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 20px; */
+    margin-top: 10px;
+    padding: 15px;
+}
+
+#select-cp-search{
+    padding: 7px 25px;
+    border-radius: 10px;
+    text-align: justify;
+    outline: none;
+}
+
+#inputtext-cp-search{
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    outline: none;
+    border: 1px solid #1a1515;
+}
+
+#btn-cp-search{
+    text-decoration: none;
+    outline: none;
+    padding: 7px 17px;
+    margin-top: 30px;
+    border-radius: 18px;
+    border: none;
+    background: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .3s;
+    
+}
+
+#btn-cp-search:hover{
+    background: rgb(110 187 231 / 58%);
+}
+
+.user-consultaPres{
+    width: 600px !important;
+    height: 240px;
+    margin-left: 15px;
+}
+
+.user-consultaPres fieldset{
+    border: 2px solid #b5b0b0;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.user-consultaPres fieldset legend{
+    font-size: 18px;
+    float: none;
+    margin-left: 10px;
+    width: 16.7%;
+}
+
+.userDetail-consultaPres{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.userDetail-consultaPres #img-consultaPres{
+    height: 21vh;
+    width: 50%;
+    padding-top: 1px;
+}
+
+.userDetail-consultaPres #img-consultaPres img{
+    width: 51%;
+    border-radius: 10px;    
+    margin-left: 25px;
+}
+
+#cp-labels{
+    display: grid;
+    align-content: space-evenly;
+    text-align: center;
+    font-weight: 600;
+    margin: 25px;
+}
+
+#cp-labels label{
+    font-size: 16px;
+    padding: 3px 20px;
+    text-transform: uppercase;
+    margin: 2px;
+}
+
+.consultaPres-table{
+    display: flex;
+    justify-content: center;
+}
+
+.cp-table{
+    margin: auto;
+}
+
+.cp-table fieldset{
+    width: 1035px;
+    height: 290px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.cp-table fieldset legend{
+    font-size: 18px;
+    float: none;
+    margin-left: 10px;
+    width: 7.3%;
+}
+
+.cp-table fieldset table{
+    border-collapse: collapse;
+    width: 1010px;
+    margin: auto;
+    border-right: 2px solid #f9fafb;
+    border-left: 2px solid #f9fafb;
+    user-select: none;
+    margin-top: 12px;
+}
+
+.cp-table fieldset table th{
+    background-color: rgb(110 187 231 / 58%);
+    color: black;
+    padding: 10px 15px;
+}
+
+.cp-table fieldset table td{
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cp-botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cp-botones #btn-cp-pdf {
+    padding: 7px 17px;
+    border-radius: 18px;
+    border: none;
+    background-color: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .3s;
+    margin-right: 9px;
+}
+
+.cp-botones #btn-cp-pdf i{
+    font-size: 25px;
+}
+
+.cp-botones #btn-cp-pdf:hover{
+    background-color: #dee2e675;
+}
+
+.cp-botones #btn-cp-mail{
+    padding: 7px 17px;
+    border-radius: 18px;
+    border: none;
+    background-color: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .3s;
+    margin-left: 9px;
+}
+
+.cp-botones #btn-cp-mail i{
+    font-size: 24px;
+}
+
+.cp-botones #btn-cp-mail:hover{
+    background-color: #dee2e675;
+}

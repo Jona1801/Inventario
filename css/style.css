@@ -5,40 +5,62 @@
     padding: 0;
     font-family: sans-serif;
 }
-
-.section-prestamos{
-    width: 1650px;
-    height: 900px;
-    margin: auto;
-    margin-top: 50px;
-    border-bottom: 2px solid rgb(165, 165, 165);
-    border-top: 2px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
-    border-right: 2px solid #b5b0b0;
-    background-color: white;
+body{
+    overflow: hidden;
 }
 
-.cabecera{
+.contenedor-principal-prestamos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.section-prestamos{
+    width: 80%;
+    height: 92vh;
+    margin: auto;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    border-top: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-right: 1px solid #b5b0b0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+}
+
+.cabecera-pres{
     display: flex;
     justify-content: space-between;
     margin: 30px;
 }
 
-.cabecera h1{
+.container-np{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-np .row{
+    width: 94% !important;
+}
+
+.cabecera-pres h1{
     text-decoration: none;
     user-select: none;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 500;
+    color: #7a7a78;
 }
 
 .botonCerrar{   
-    padding: 0 20px;
+    width: 45px;height: 32px;
     background-color: rgb(248, 86, 86);
     border: 1px solid #a7a79b;
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: .5s;
-
 }
 
 .botonCerrar:hover{
@@ -49,15 +71,14 @@
 
 .prestamo-fil{
     background-color: #fff;
-    height: 100px;
-    width: 650px !important;
-    margin-top: 25px;
-    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .prestamo-fil fieldset{
     width: 550px;
     height: 110px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
 }
 
 .prestamo-fil legend{
@@ -67,24 +88,20 @@
     margin-left: 10px !important;
 }
 
-.buscadores-prestamos{
-    display: flex;
-    justify-content: space-around;
-    
+.select-gpn{
+    margin-left: 5px;
 }
 
-.buscadores-prestamos select{
-    border-radius: 8px;
-    padding: 5px 25px;
+.select-gpn select{
+    padding: 7.5px 22px;
     border-radius: 10px;
-    border: 1px solid #9a9a91;
+    border: 1px solid rgb(36 31 31 / 75%);
     text-align: justify;
     outline: none;
-    margin-left: 20px;
     
 }
 
-.buscadores-prestamos input{
+.select-gpn input{
     border-radius: 10px;
     height: 30px;
     width: 150px;
@@ -93,40 +110,54 @@
     text-align: center;
 }
 
-.buscar-pres{
-    margin-top: 13px;
-    position: relative;
-    right: 95px;
-
+.select-search-gpn{
+    display: flex;
+    justify-content: space-around;
 }
 
-.buscadores-prestamos a{
+.search-gpn input{
+    width: 200px;
+    outline: none;
+    border-radius: 10px;
+    color: #1a1515;
+    background: transparent;
+    border: 1px solid rgb(36 31 31 / 85%);
+    padding: 5px 10px;
+}
+
+.buscar-pres{
+    margin-top: 11px;
+    position: relative;
+    right: 95px;
+}
+
+.search-gpn button{
     background-color: transparent;
     color: #1a1515;
     border: 1px solid rgb(36 31 31 / 75%);
-    border-radius: 10px;
-    padding: 2px 10px;
+    border-radius: 11px;
+    padding: 0 5px;
     text-decoration: none;
-    transition: .5s;
+    transition: .4s;
+    margin-left: .5rem;
 }
 
-.buscadores-prestamos a:hover{
-    background-color: rgb(110 187 231);
-    color: white;
-    border: 1px solid #9a9a91;
+.search-gpn button:hover{
+    background-color: rgb(110 187 231 / 60%);
+    border: 1px solid white;
 }
 
 .prestamos-caja2{
-    position:  relative;
-    width: 600px;
-    margin-bottom: 12px;
     margin-top: 50px;
     border-radius: 10px;
 }
 .prestamos-caja2 fieldset{
     width: 550px;
-    height: 600px;
-    border: 2px solid #b5b0b0 ;
+    height: 580px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .prestamos-caja2 legend{
@@ -136,39 +167,41 @@
     width: 44%;
 }
 
-/*
-.caja2 i{
-    margin-top: 70px;
-    font-size: 100PX;
-    position: absolute;
-    left: 35PX;
-}*/
-
 .info{
     display: flex;
     justify-content: space-around;
 }
 
-.info i{
-    position: relative;
-    margin-top: 70px;
-    font-size: 80px;
-    left: 30px;
+.info-img {
+    width: 28%;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
-.info ul li{
-    font-size: 18px;
+.info-img img{
+    max-width: 100%;
+    border-radius: 14px;
+}
+
+.info .gpn-labels{
+    display: grid;
+    text-align: center;
+    font-weight: 600;
+    align-content: space-evenly;
+    margin-top: 10px;
+}
+.info .gpn-labels label{
+    height: 20px;
+    font-size: 16px;
     position: relative;
-    top: 70px;
-    margin: 2px;
-    padding: 2px 20px;
-    list-style: none;
-    margin-right: 30px;
+    top: 7px;
+    right: 5px;
+    text-transform: uppercase;
 }
 
 .area{
-    height: 360px;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 .area label{
     margin-bottom: 0;
@@ -176,11 +209,6 @@
     position: relative;
     font-size: 12px;
     font-weight: 500;
-}
-
-.area textarea{
-    width: 90% !important;
-    margin-left: 20px !important;
 }
 
 .area table{
@@ -207,131 +235,77 @@
     padding-bottom: 10px;
 }
 
+
 /*Segundo Row*/
 
 .equipo-prestamos{
     
-    width: 750px !important;
+    width: 100% !important;
     position: relative;
     background-color: #fff;
-    left: 90px;
     margin-bottom: 10px;
     border-radius: 8px;
 }
 
 .equipo-prestamos fieldset{
-    width: 750px;
+    width: 100%;
     height: 450px;
     border: 2px solid #9a9a91;
+    border-radius: 10px;
 }
 
 .equipo-prestamos legend{
+    width: 14.5%;
     float: none !important;
     font-size: 18px;
     margin-left: 10px;
-    width: 16%;
+    
 
 }
 
-.search-1{
-    position: relative;
-    width: 300px;
-    height: 40px;
-    left: 35px;
-}
-
-.search-1 input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    outline: none;
-    border-radius: 10px;
-    margin-right: 150px;
-    color: #1a1515;
-    background: transparent;
-    border: 1px solid rgb(36, 31, 31);
-    padding: 5px 10px;
-    font-size: 15px;
-}
-
-.search-1 i{
-    position: absolute;
-    font-size: 17px;
-    top: 12px;
-    transform: translateY(-39%);
-    left: 10px;
-    color: #1a1515;
-    padding-right: 5px;
-}
-
-.search input::placeholder{color: rgb(109, 103, 103);}
 
  /*Segundo filtro de busqueda*/
-.search{
+
+.search-gpn-be{
     position: relative;
-    width: 300px;
-    height: 40px;
-    margin-right: 80px;
     top: 40px;
     left: 35px;
 }
 
-.search input{
-    position: absolute;
-    top: 0;
-    left: 0;
+.search-gpn-be input{
     outline: none;
     border-radius: 10px;
-    margin-right: 150px;
     color: #1a1515;
     background: transparent;
-    border: 1px solid rgb(36, 31, 31);
-    padding: 5px 10px 0 45px
+    border: 1px solid rgb(36 31 31 / 85%);
+    padding: 6px 20px;
 }
 
-.search i{
-    font-size: 17px;
-    position: absolute;
-    top: 12px;
-    transform: translateY(-39%);
-    left: 10px;
-    color: #1a1515;
-    padding-right: 10px;
-}
 
-.search input::placeholder{color: rgb(109, 103, 103);}
-
-.buscar-pres-e{
-    position: relative;
-    left: 310px;
-    margin-top: 5px;  
-}
-
-.buscar-pres-e a{
-    padding: 2px 10px;
+.search-gpn-be button{
+    padding: 0 5px;
     background: transparent;
     border: 1px solid rgb(36 31 31 / 75%);
     color: #231d1de6;
     border-radius: 10px;
     text-decoration: none;
-    transition: .5s;
+    transition: .4s;
+    margin-left: 10px;
 }
 
-.buscar-pres-e a:hover{
-    border: 1px solid #9a9a91;
-    background: rgb(110 187 231);
-    color: white;
+.search-gpn-be button:hover{
+    border: 1px solid #fff;
+    background: rgb(110 187 231 / 60%);
 }
 
 .area-equipos{
-    height: 420px;
-    padding-top: 65px;
+    padding-top: 70px;
 }
 
 .area-equipos label{
     margin-bottom: 0;
     position: relative;
-    left: 8px;
+    left: 10px;
     font-size: 12px;
     font-weight: 500;
     
@@ -341,7 +315,7 @@
  .area-equipos table{
     margin-top: 10px;
     margin: auto;
-    width: 740px;
+    width: 98%;
     border-collapse: collapse;
     border-left: 2px solid #f9fafb;
     border-right: 2px solid #f9fafb;
@@ -365,40 +339,39 @@
 
 .b-quitar{
     text-decoration: none;
-    padding: 4px 8px;
-    border: 1px solid rgb(110 187 231 / 58%);
+    padding: 0 5px;
+    border: 1px solid rgb(36 31 31 / 65%);
     background-color: transparent;
     color: #1a1515;
     border-radius: 10px;
-    transition: .5s;
+    transition: .4s;
     cursor: pointer;
 }
 
 .b-quitar:hover{
-    background-color: rgb(110 187 231);
-    border: 1px solid #b5b0b0;
-    color: white;
-    font-weight: 500;
+    background-color: rgb(110 187 231 / 60%);
+    border: 1px solid #fff;
 }
 
 /*Contenedor de Accesorios*/
 
 .contenedor{
-    width: 860px !important;
+    width: 100% !important;
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
 }
 
-#miid::placeholder {
+#textarea-gpn-acc::placeholder {
     color: rgb(68, 66, 66);
-    padding-left: 10px;
-    padding-top: 30px;
+    padding-left: 8px;
+    padding-top: 40px;
+    font-size: 20px;
   }
 
 .contenedor .cont-area{
-    height: 150px;
-    width: 315px;
+    height: 160px;
+    width: 300px;
 }
 .contenedor .cont-area textarea{
     outline: none;
@@ -407,25 +380,12 @@
     border-left: 2px solid #b5b0b0;
     border-top: 2px solid #b5b0b0;
     border-radius: 10px;
-    margin-left: 80px;
+    margin-left: 20px;
     width: 290px;
     height: 158px;;
     text-align: justify;
-    padding: 10px;
+    padding: 12px;
     margin-top: 24px;
-}
-
-#miid::placeholder {
-    color: rgb(68, 66, 66);
-    padding-left: 8px;
-    padding-top: 40px;
-    font-size: 20px;
-  }
-
-.contenedor .accesorios p{
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 10px;
 }
 
 .contenedor .periodos{
@@ -435,13 +395,15 @@
     height: 170px;
     width: 400px !important;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 11px;
 }
 
 .periodos fieldset{
     height: 172px;
     width: 400px;
     border: 2px solid #b5b0b0;
+    border-radius: 10px;
 
 }
 
@@ -451,6 +413,7 @@
     margin-left: 10px;
     width: 32%;
 }
+
 .fechas-prestamos{
     display: flex;
     flex-direction: column;
@@ -458,182 +421,41 @@
     margin-right: 120px;
 }
 
-
 .fechas-prestamos input{
     padding: 6px 15px;
     border-radius: 8px;
-    border: 1px solid #1a1515;
+    border: 1px solid rgb(36 31 31 / 75%);
     margin: auto;
     outline: none;
 }
 
 .agregar{
+    height: 50px;
     position: relative;
-    bottom: 60px;
-    margin-left: 305px;
+    bottom: 78px;
+    left: 305px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .btn-agregar{
     text-decoration: none;
-    padding: 4px 10px;
-    border: 1px solid rgb(110 187 231 / 58%);
+    padding: 0 8px;
+    border: 1px solid rgb(36 31 31 / 75%);
     background: transparent;
     color: #1a1515;
     border-radius: 10px;
-    transition: .54s;
+    transition: .4s;
     cursor: pointer;
 }
 
 .btn-agregar:hover{
-    background-color: rgb(110 187 231);
-    color: white;
-    border: 1px solid #a7a79b;
+    background-color: rgb(110 187 231 / 60%);
+    border: 1px solid #fff;
 }
 
-/*Estilos para la vista de baja asignaciones*/
-
-body .section-asign {
-    max-width: 1450px;
-    margin: auto;
-    margin-top: 100px;
-    border-bottom: 2px solid rgb(165, 165, 165);
-    border-top: 2px solid #b5b0b0;
-    border-left: 2px solid #b5b0b0;
-    border-right: 2px solid #b5b0b0;
-}
-
-
-.cabecera-asign{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px;
-}
-.cabecera-asign h1{
-    text-decoration: none;
-    user-select: none;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.baja-asign{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 30px;
-}
-
-.user-fieldset{
-    width: 400px;
-    height: 200px;
-}
-
-
-fieldset{
-    border: 2px solid #b5b0b0  !important;
-    margin: 10px !important;
-    border-radius: 10px;
-    height: 150px;
-}
-
-.user-fieldset legend{
-    font-size: 17px !important;
-    float: none !important;
-    width: 26% !important;
-    margin-left: 10px !important;
-}
-
-
-
-.user-search-select{
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
-}
-
-.user-search-select select{
-    padding: 6px 25px;
-    border-radius: 12px;
-    margin: auto;
-    margin-bottom: 15px;
-    outline: none;
-    text-align: center;
-}
-
-.user-search-select input{
-    padding: 4px 16px;
-    border-radius: 12px;
-    margin: auto;
-    margin-top: 10px;
-    outline: none;
-    border: 1px solid #1a1515;;;
-}
-
-.user-icon{
-    justify-content: center;
-    display: flex;
-    margin-top: 30px;
-}
-
-.user-icon a{
-    width: 45px;
-    background: rgb(196, 194, 194);
-    height: 45px;
-    border-radius: 22px;
-    position: relative;
-    transition: .5s;
-    box-shadow: 0px 5px 5px #9a9a9a;
-}
-
-.user-icon  i{
-    position: absolute;
-    font-size: 22px;
-    left: 13px;
-    top: 7px;
-    color: #1a1515;
-}
-
-.user-icon a:hover{
-    background-color: rgb(110 187 231 / 58%);
-}
-
-.user-detail{
-    position: relative;
-    width: 700px;
-    border-top: 2px solid #b5b0b0;;
-    border-bottom:1px solid #b5b0b0;;
-    border-left: 2px solid #b5b0b0;;
-    border-right: 2px solid #b5b0b0;
-    border-radius: 10px;
-}
-
-.user-detail p{
-    position: absolute;
-    left: 2%;
-    bottom: 254px;
-    background: white;
-    padding: 0 4px;
-}
-
-.user-details{
-    display: flex;
-    justify-content: space-around;
-    margin: 30px;
-    padding: 35px;
-}
-
-.user-details i{
-    position: relative;
-    font-size: 85px;
-    right: 70px; 
-    top: 10px;                   
-}
-
-.user-details ul li{
-    font-size: 18px;
-    position: relative;
-    margin: 2px;
-    padding: 2px 20px;
-    list-style: none;
-    left: 40px;
-}
 
 
 /*Parte responsiva para Laptops*/
@@ -642,54 +464,6 @@ fieldset{
         right: 60px;
         max-width: 500px;
     }
-
-    .caja2{
-        right: 60px;
-        max-width: 500px;
-    }
-
-    .area label{
-        left: 10px;
-    }
-    .area table{
-        max-width: 525px;
-    }
-
-    .equipo{
-        left: 0;
-        right: 10px;
-        max-width: 704px;
-    }
-    .equipo .area-equipos label{
-        right: 270px !important;
-    }
-
-    .area-equipos table{
-        max-width: 710px;
-    }
-    
-    .area-equipos label{
-        left: 19px;
-    }
-    .contenedor{
-
-        margin-left: 10px;
-    }
-
-    .contenedor.cont-area{
-        width: 200px;
-        height: 120px;
-    }
-
-    .contenedor .periodo input {
-        padding: 1px 4px;
-        border-radius: 12px;
-    }
-
-    .agregar{
-        margin-left: 310px;
-    }
-
     
 }
 
@@ -699,7 +473,6 @@ fieldset{
 
     .section-prestamos{
         max-width: 1142px !important;
-        margin: 20px !important;
         height: auto !important;
     }
 
@@ -720,7 +493,7 @@ fieldset{
     }
     .area table{
         width: 650px;
-        max-width: 612px;
+        max-width: 615px;
     }
 
     .row{
@@ -729,9 +502,29 @@ fieldset{
         flex-direction: column;
     }
 
+    .col-md-7{
+        width: 100% !important;
+    }
+
+    .col-md-5{
+        width: 100% !important;
+    }
+
+    .biu-prestamo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .container{
       
       max-width: 630px !important;
+    }
+
+    .container-np .row {
+        max-width: 80%;
     }
 
     .cabecera input{
@@ -784,9 +577,6 @@ fieldset{
         max-width: 500px !important;
         margin-right:60px;
     }
-    .contenedor .accesorios{
-        margin-left: 0;
-    }
 
     .periodos fieldset{
         width: 416px;
@@ -797,19 +587,12 @@ fieldset{
         border-radius: 12px;
     }
 
-    .agregar{
-        margin-left: 320px;
-    }
-
     .periodos legend{
-        width: 31%;
+        width: 31.8%;
     }
 
     .fechas-prestamos input{
         padding: 3px 9px;
-    }
-    .buscadores-prestamos select{
-        margin-left: 0;
     }
 
     .buscar-pres {
@@ -817,14 +600,24 @@ fieldset{
         position: relative;
         right: 130px;
     }
+
+    .info-img img {
+        max-width: 85%;   
+    }
+
+    .equipo-prestamos legend {
+        width: 16.3%;
+    }
 }
 
 /*Tablets mas pequeñas*/
 @media screen and (max-width:992px) {
 
+    body{
+        overflow-y: auto;
+    }
     .section-prestamos {
-        max-width: 776px !important;
-        margin: 20px !important;
+        width: 95%;
         height: auto !important;
     }
     .equipo-prestamos fieldset {

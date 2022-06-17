@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/shortcut-icon.ico">
+    <title>Devolución Prestamos</title>
+    <link rel="stylesheet" href="css/devolucionPrestamo.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="contenedor-principal-dp">
+        <div class="section-dp">
+            <div class="cabecera-dp">
+                <h1>Devolución de Prestamos</h1>
+                <input type="button" class="botonCerrar-dp" value="X" onclick="window.close()">
+            </div>
+
+            <div class="devolucion-prestamos">
+                <div class="fieldset-dp-us">
+                    <fieldset>
+                        <legend>User Search</legend>
+
+                        <div class="dp-user-search">
+                            <select name="" id="select-dp-us">
+                                <option value="">Select Option</option>
+                                <option id="option-dp-nue">Numero Empleado</option>
+                                <option id="option-dp-noe">Nombre Empleado</option>
+                            </select>
+
+                            <input id="input-dp-us" type="text" placeholder="">
+                            <button id="btn-dp-us" title="Buscar"><img src="img/icons//search.svg" width="25px"></button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="fieldset-dp-ud">
+                    <fieldset>
+                        <legend>User Details</legend>
+
+                        <div class="info-dp">
+                            <div class="info-dp-img">
+                                <img id="img-dp-ud" src="img/tanos.jpg">
+                            </div>
+                            <dp class="labels-dp">
+                                <label id="nombre-dp-ud">Nombre</label>
+                                <label id="area-dp-ud">Area</label>
+                                <label id="cargo-dp-ud">Cargo</label>
+                                <label id="turno-dp-ud">Turno</label>
+                            </dp>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="devolucion-prestamo-table mt-3">
+                <div class="dp-table">
+                    <fieldset>
+                        <legend>Prestamos</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Label</th>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>Serial</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-dp-prestamos">
+                                <tr id="f1-table-dp">
+                                    <td>180199</td>
+                                    <td>laptops</td>
+                                    <td>990118</td>
+                                    <td>025310</td>
+                                    <td>Laptop DELL</td>
+                                    <td>Notebook</td>
+                                    <td><button id="btn1-quitar-dp" class="btn-dp-quitar">Quitar</button></td>
+                                </tr>
+                                <tr id="f2-table-dp">
+                                    <td>180199</td>
+                                    <td>laptops</td>
+                                    <td>990118</td>
+                                    <td>025310</td>
+                                    <td>Laptop HP</td>
+                                    <td>Notebook</td>
+                                    <td><button id="btn2-quitar-dp" class="btn-dp-quitar">Quitar</button></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="textarea-btn-dp">
+                <div class="text-area-dp">
+                    <textarea id="textarea-dp-mb" cols="30" rows="10" placeholder="Motivo de Baja"></textarea>
+                </div>
+                <div class="btn-save-dp">
+                    <button id="btn-dp-mb" title="Guardar"><img src="img/icons/box-arrow-down.svg" height="25px" width="25px" alt=""></button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function (){
+            $('#btn1-quitar-dp').click(function(){
+                $('#f1-table-dp').remove();
+            });
+
+            $('#btn2-quitar-dp').click(function(){
+                $('#f2-table-dp').remove();
+            });
+            
+        });
+
+    </script>
+</body>
+</html>
