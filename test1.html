@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<style>
+    .btn-add-acces{
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: rebeccapurple;
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr></tr>
+        </thead>
+        
+        <tbody id="table-gpn">
+            <tr id="tr-gpn-1">
+                <td id="td-col-1-1"></td>
+                <td id="td-col-2-1"><button id="add-gpn-1" onclick="agregarAcc(this)">+</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+    
+    function agregarAcc(valor){
+        var numero =valor.id.substring(8, 10);
+
+        switch(  $('#'+ valor.id).text())
+            {
+                case "+":
+                
+                $("#td-col-1-"+ numero).append('<input type="text" id="valor-'+numero+'" required placeholder="Escribe un accesorio" style="border-radius:10px; outline:none; padding:4px 10px; border:1px solid #b5b0b0;">');
+                $('#'+ valor.id).text('S');
+                    break;
+
+                    case "S":
+
+                    $('#'+ valor.id).text('–');
+                        var nuevo= 
+                            `<tr id="tr-gpn-${(parseInt(numero)+1)}">
+                                <td id="td-col-1-${(parseInt(numero)+1)}"></td>
+                                <td id="td-col-2-${(parseInt(numero)+1)}"><button id="add-gpn-${(parseInt(numero)+1)}" onclick="agregarAcc(this)">+</button></td>
+                            </tr>`
+
+                        $('#table-gpn').append(nuevo)
+                        break;
+
+                        case "–":
+
+                            $('#tr-gpn-'+ numero).remove()
+                            break;
+            }
+
+    }
+        // '<tr><td><input id="input-acc" type="text" required name="field_name[]" placeholder="Escribe un Accesorio" style="border-radius:10px; outline:none; border: 1px solid #b5b0b0; padding: 4px 10px; font-size:15px; " > <button class="remove_btn" id="remove-acc" title="Eliminar" ><img src ="img/icons/dash.svg" /></button> <button class="save_btn" id="save-acc" title="Guardar" ><img src="img/icons/check-lg.svg" /></button> </td></tr>';
+    </script>
+
+</body>
+</html>

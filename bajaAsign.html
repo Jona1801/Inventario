@@ -8,9 +8,7 @@
     <link rel="icon" href="img/shortcut-icon.ico">
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/bajaAsign.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    
 </head>
 
 <body>
@@ -23,20 +21,51 @@
             </div>
 
             <div class="baja-asign">
-                <div class="user-fieldset mb-3">
+                <div class="user-fieldset ">
                     <fieldset >
                         <!-- Legend tag using -->
                         <legend>User Search</legend>
 
                         <div class="ba-user-search">
-                            <select name="" id="select-ba-us">
-                                <option value="">Select Option</option>
-                                <option value="">Numero Empleado</option>
-                                <option value="">Nombre Empleado</option>
+                            <select id="select_ba_us">
+                                <option value="selectOption" selected="selected">Select Option</option>
+                                <option value="numEmple">Numero Empleado</option>
+                                <option value="nomEmple">Nombre Empleado</option>
                             </select>
-                            <input id="inputtext-ba-us" class="mt-4" type="text" placeholder="">
-                            <button id="btn-ba-us" class="btn-snunoe" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                            <input id="inputdis-ba-us" type="text" autocomplete="off" disabled>
+                            <input class="validaNum" id="inputnum-ba-us" type="text" autocomplete="off" maxlength="9" required placeholder="Num. Empleado">
+                            <div id="mensaje1" class="errores">Escribe N. Empleado.</div>
+                            <input id="inputtext-ba-us" type="text" autocomplete="off"  maxlength="50" required placeholder="Nombre, Apellidos" onkeypress="return soloLetras(event)">
+                            <div id="mensaje2" class="errores">Escribe Nom. Empleado.</div>
+
+                            <button disabled id="btn-ba-us" class="btn-snunoe" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
                         </div>
+                        
+                        <script type="text/javascript">
+
+                            
+                            /*
+                            function habilitar(){
+                                select = document.getElementById("select_ba_us").value;
+                                val = 0;
+
+                                if(select == ""){
+                                    val++;
+                                }
+                                if(val == "numEmple"){
+                                    document.getElementById("btn-ba-us").disabled = false;
+                                }
+                                if(val == "nomEmple"){
+                                    document.getElementById("btn-ba-us").disabled = false;
+                                }
+                            }
+
+                            document.getElementById("select_ba_us").addEventListener("change", habilitar);
+                            document.getElementById("btn-ba-us").addEventListener("click", () =>{
+                                alert("Done!!!");
+                            });
+                            */
+                        </script>
                     </fieldset>
                 </div>
 
@@ -47,13 +76,13 @@
                         
                         <div class="info-ba">
                             <div class="info-ba-img">
-                                <img id="img-ba-ud" src="img/tanos.jpg" ></i>
+                                <img id="img-ba-ud" src=".jpg" ></i>
                             </div>
                             <div class="ba-labels">
                                 <label id="nombre-ba-ud">Nombre </label>
-                                <label id="area-ba-ud">Area</label>
-                                <label id="cargo-ba-ud">Cargo</label>
-                                <label id="turno-ba-ud">Turno</label>
+                                <label class="mt-label" id="area-ba-ud">Area</label>
+                                <label class="mt-label" id="cargo-ba-ud">Cargo</label>
+                                <label class="mt-label" id="turno-ba-ud">Turno</label>
                             </div> 
                         </div>     
                     </fieldset>
@@ -64,7 +93,7 @@
                 <div class="ba-assigned">
                     <fieldset>
                         <legend>Assigned</legend>
-                        <table class="mb-3">
+                        <table class="">
                             <thead>
                                 <tr>
                                     <th>Label</th>
@@ -78,30 +107,33 @@
                             </thead>
                             <tbody id="table-ba-assigned">
                                 <tr>
-                                    <td>180199</td>
-                                    <td>laptops</td>
+                                    <td>100125</td>
+                                    <td>DELL</td>
                                     <td>990118</td>
                                     <td>025310</td>
                                     <td>Laptop DELL</td>
                                     <td>Notebook</td>
-                                    <td><input id="checkbox-ba-assigned" class="ic-tba" type="checkbox"></td>
+                                    <td><input id="checkbox-ba-assigned" class="ic-tba" type="checkbox" disabled></td>
                                 </tr>
+                                
                             </tbody>
                         </table>
                     </fieldset>
                 </div>
             </div>
 
-            <div class="ba-area-tb mb-4">
-                <div class="ba-text-area">
-                    <textarea  id="textarea-ba-notes" cols="30" rows="10" placeholder="Enter Notes"></textarea>
+            <div class="ba-area-tb">
+                <div class="ba-text-area" >
+                    <textarea id="textarea-ba-notes" class="ta-ba" disabled cols="30" rows="10" placeholder="Enter Notes"></textarea>
                 </div>
-                <div class="btn-ba-guardar">
-                    <button id="btn-ba-save" title="Guardar"><img src="img/icons/box-arrow-down.svg" width="25px" height="26px"></button>
+                <div class="btn-ba-guardar" >
+                    <button type="submit" disabled id="btn-ba-save" title="Guardar" ><img src="img/icons/box-arrow-up.svg" width="25px" height="26px" ></button>
                 </div>
             </div>
-            
         </div>
     </div>
+
+<script src="js/bajaAsign.js"></script>
+   
 </body>
 </html>

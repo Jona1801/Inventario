@@ -1,194 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/shortcut-icon.ico">
-        <title>Generar Prestamo</title>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-        
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/shortcut-icon.ico">
+    <link rel="stylesheet" href="css/prestamos.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Generar Prestamos</title>
+</head>
 <body>
-
     <div class="contenedor-principal-prestamos">
         <div class="section-prestamos">
             <div class="cabecera-pres">
                 <h1>Generar Prestamo Nuevo</h1>
-                <input type="button" class="botonCerrar" value="X" onclick="window.close()">
+                <input type="button" value="X" class="botonCerrar" onclick="window.close()">
             </div>
+            <div class="container-prestamos">
+                <div class="section1-pres">
+                    <div class="fieldset1-gpn">
+                        <fieldset>
+                            <legend>Buscar</legend>
 
-            <div class="container-np mb-2">
-                <div class="row">
-                    <div class="col-md-5 biu-prestamo">
-                        <div class="prestamo-fil">
-                            <fieldset>
-                                <legend>Buscar</legend>
-
-                                <div class="select-search-gpn mt-2">
-                                    <div class="select-gpn">
-                                        <select id="gpn-select">
-                                            <option selected="selected" value="">Select Option</option>
-                                            <option value="">Numero Empleado</option>
-                                            <option value="">Nombre Empleado</option>
-                                        </select>
-                                    </div>
-                                    <div class="search-gpn">
-                                        <input id="gpn-input" type="text" placeholder="Search....">
-                                        <button id="gpn-search">Buscar</button>  
-                                    </div>
+                            <div class="select-search-gpn">
+                                <div class="select-gpn">
+                                    <select id="select_gpn">
+                                        <option value="selectOptionGpn" selected="selected">Select Option</option>
+                                        <option value="numEmpleGpn">Num. Empleado</option>
+                                        <option value="nomEmpleGpn">Nombre Empleado</option>
+                                    </select>
                                 </div>
-                                
-                                
-
-                            </fieldset>
-                        </div>
-
-                        <div class="prestamos-caja2">
-                            <fieldset>
-                                <legend>Informacion de Usuario</legend>
-                    
-                                <div class="info">
-                                    <div class="info-img">
-                                        <img id="img-gpn-iu" src="img/tanos.jpg"></i>
-                                    </div>
-                                    <div class="gpn-labels">
-                                        <label id="nombre-gpn-iu">Nombre</label>
-                                        <label id="area-gpn-iu">Area</label>
-                                        <label id="puesto-gpn-iu">Puesto</label>
-                                        <label id="turno-gpn-iu">Turno</label>
-                                    </div>
+                                <div class="search-gpn">
+                                    <input id="inputdis-gpn" type="text" autocomplete="off" disabled>
+                                    <input id="inputnum-gpn" class="validaNum"  type="text" autocomplete="off" maxlength="9" required placeholder="Num. Empleado" >
+                                    <input id="inputtext-gpn" type="text" autocomplete="off" maxlength="50" required placeholder="Nombre, Apellidos" onkeypress="return soloLetras(event)" >
+                                    <button id="btn-search-gpn">Buscar</button>
                                 </div>
+                            </div>
 
-                                <div class="area">
-                                    <label class="form-label">Historial de prestamos</label>
-                                    <table class="mb-3">
-                                        <thead>
-                                            <tr>
-                                                <th>NO.</th>
-                                                <th>Equipo</th>
-                                                <th>Fecha</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="idu-pn-table" >
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Computadora</td>
-                                                <td>18-01-2022</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Cañon</td>
-                                                <td>19-01-2022</td>
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </fieldset>   
-                        </div>
+                        </fieldset>
                     </div>
 
-                    <div class="col-md-7 pt-5 ">
-                        <div class="equipo-prestamos">
-                            <fieldset>
-                                <legend>Buscar Equipo</legend>
+                    <div class="fieldset2-gpn">
+                        <fieldset>
+                            <legend>Información de Usuario</legend>
 
-                                <div class="search-gpn-be">
-                                    <input type="text" id="gpn-be-input" placeholder="Search here...">
-                                    <button id="gpn-be-search">Buscar</button>
+                            <div class="info-gpn">
+                                <div class="img-gpn">
+                                    <img id="img-gpn-iu" src=".jpg" alt="">
                                 </div>
-                               
-
-                                <div class="area-equipos">
-                                    <label class="form-label">Equipos para prestamos</label>
-                                    <table class="mb-3">
-                                        <thead>
-                                            <tr>
-                                                <th>Label</th>
-                                                <th>Brand</td>
-                                                <th>Model</th>
-                                                <th>Serial</th>
-                                                <th>Description</th>
-                                                <th>Categoria</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
+                                <div class="labels-gpn">
+                                    <label id="nombre-gpn-iu">Nombre</label>
+                                    <label id="area-gpn-iu">Area</label>
+                                    <label id="puesto-gpn-iu">Puesto</label>
+                                    <label id="turno-gpn-iu">Turno</label>
+                                </div>
+                            </div>
+                            <div class="gpn-table">
+                                <label for="">Historial de Prestamos</label>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Label</th>
+                                            <th>Equipo</th>
+                                            <th>Fecha</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-gpn-iu">
                                         
-                                        <tbody id="table-gpn-be">
-                                            <tr id="f1-gpn-be">
-                                                <td>1</td>
-                                                <td>Laptops</td>
-                                                <td>001510</td>
-                                                <td>899099</td>
-                                                <td>Laptop HP</td>
-                                                <td>Notebook</td>
-                                                <td><button  id="btn-gpn-be" class="b-quitar">Quitar</button></td>
-                                            </tr>
-
-                                            <tr id="f2-gpn-be">
-                                                <td>2</td>
-                                                <td>Laptops</td>
-                                                <td>002530</td>
-                                                <td>228099</td>
-                                                <td>Laptop Lenovo</td>
-                                                <td>Notebook</td>
-                                                <td><button  id="btn2-gpn-be" class="b-quitar">Quitar</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </fieldset>
-                        </div>
-
-                        <div class="contenedor mb-4">
-                            <div class="cont-area">
-                                <textarea id="textarea-gpn-acc" cols="30" rows="5" placeholder="Accesorios"></textarea>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="periodos">
-                                <fieldset>
-                                    <legend>Periodo de Uso</legend>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="section2-pres">
+                    <div class="fieldset3-gpn">
+                        <fieldset>
+                            <legend>Buscar Equipo</legend>
 
-                                    <div class="fechas-prestamos">
-                                        <input class="mb-2" id="inicio-gpn-pu" type="datetime-local">
-                                        <input class="mt-3" id="final-gpn-pu" type="datetime-local">
-                                    </div>
-                                    
-                                    <div class="agregar"><button id="btn-gpn-pu" class="btn-agregar">Agregar</button></div>
-                                </fieldset>  
+                            <div class="search-gpn-be">
+                                <input type="text" id="input-gpn-be" placeholder="Search here...">
+                                <button id="btn-gpn-be">Buscar</button>
                             </div>
-                        </div>
+
+                            <div class="table-gpn-be">
+                                <label for="">Equipos para prestamos</label>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Label</th>
+                                            <th>Brand</th>
+                                            <th>Model</th>
+                                            <th>Serial</th>
+                                            <th>Description</th>
+                                            <th>Category</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-gpn-be">
+                                        
+                                        <tr id="fil-gpn-be">
+                                            <td>1</td>
+                                            <td>HP</td>
+                                            <td>180199</td>
+                                            <td>105110</td>
+                                            <td>Laptop HP</td>
+                                            <td>Notebook</td>
+                                            <td><button id="btn-gpn-quitar" class="btn-quitar">Quitar</button></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </fieldset>
                     </div>
 
+                    <div class="acces-fechas-gpn">
+                        <div class="table-accesorios">
+                            <fieldset>
+                                <legend>Accesorios</legend>
+
+                                <table class="table-acc">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Equipo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-acc">
+                                        
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><button class="btn-acces" id="btn-add-acc" title="Agregar"><img src="img/icons/plus-lg.svg" width="19px"></button>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </fieldset>
+
+                        </div>
+
+                        <div class="periodos">
+                            <fieldset>
+                                <legend>Periodo de Uso</legend>
+
+                                <div class="fechas-prestamos">
+                                    <input id="inicio-gpn-pu" type="datetime-local" title="Fecha Inicio">
+                                    <input id="final-gpn-pu" type="datetime-local" class="mt-acces" title="Fecha Final">
+                                </div>
+                                
+                            </fieldset>  
+
+                            
+                        </div>
+
+                        <div class="agregar-prestamo">
+                            <button id="btn-agregar-gpn" title="Agregar prestamo">Agregar</button>
+                        </div>  
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        $(function (){
-            $('#btn-gpn-be').click(function(){
-                $('#f1-gpn-be').remove(); //Ocultar Elemento
-            });
-            $('#btn2-gpn-be').click(function(){
-                $('#f2-gpn-be').remove(); //Eliminar Elemento
-            });
-        });
 
-        $(document).ready(function(){
-        $("#gpn-be-input").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#table-gpn-be tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-        });
-
-    </script>
-
+    
 </body>
 </html>
