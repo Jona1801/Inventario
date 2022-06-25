@@ -8,18 +8,9 @@
     <script src="js/jquery-3.6.0.min.js"></script>
 
 </head>
-
-<style>
-    .btn-add-acces{
-        padding: 5px 10px;
-        border-radius: 10px;
-        color: rebeccapurple;
-    }
-</style>
 <body>
     <table>
         <thead>
-            <tr></tr>
         </thead>
         
         <tbody id="table-gpn">
@@ -41,26 +32,66 @@
                 
                 $("#td-col-1-"+ numero).append('<input type="text" id="valor-'+numero+'" required placeholder="Escribe un accesorio" style="border-radius:10px; outline:none; padding:4px 10px; border:1px solid #b5b0b0;">');
                 $('#'+ valor.id).text('S');
-                    break;
 
-                    case "S":
+                break;
 
-                    $('#'+ valor.id).text('–');
-                        var nuevo= 
-                            `<tr id="tr-gpn-${(parseInt(numero)+1)}">
-                                <td id="td-col-1-${(parseInt(numero)+1)}"></td>
-                                <td id="td-col-2-${(parseInt(numero)+1)}"><button id="add-gpn-${(parseInt(numero)+1)}" onclick="agregarAcc(this)">+</button></td>
-                            </tr>`
+                case "S":
 
-                        $('#table-gpn').append(nuevo)
-                        break;
+                $('#'+ valor.id).text('–');
 
-                        case "–":
+                var nuevo= 
+                    `<tr id="tr-gpn-${(parseInt(numero)+1)}">
+                        <td id="td-col-1-${(parseInt(numero)+1)}"></td>
+                        <td id="td-col-2-${(parseInt(numero)+1)}"><button id="add-gpn-${(parseInt(numero)+1)}" onclick="agregarAcc(this)">+</button></td>
+                    </tr>`
 
-                            $('#tr-gpn-'+ numero).remove()
-                            break;
+                $('#table-gpn').append(nuevo)
+
+                break;
+
+                case "–":
+
+                $('#tr-gpn-'+ numero).remove()
+
+                break;
             }
 
+    }
+
+    $('document').ready(function(){
+        $('#tr-gpn-1 input').keyup(function(){
+            var env = $(this).parents('#tr-gpn-1');
+            var anali = checkCampos(env);
+
+            if(anali){
+                $('#'+ valor.id).text('s').prop('disabled', false).css('background', 'red', 'border', '1px solid #241f1fbf');
+            }
+            else{
+                $('#'+ valor.id).text('s').prop('disabled', true).css('background', '#e9ecef', 'border','1px solid #ccc');
+
+            }
+
+        });
+    });
+
+    /*Input Vacio */
+    //Función para comprobar los campos de texto
+    function checkCampos(obj) {
+        var camposRellenados = true;
+        obj.find("input").each(function() {
+        var $this = $(this);
+            if( $this.val().length <= 0 ) {
+                camposRellenados = false;
+                return false;
+            }
+        });
+        
+        if(camposRellenados == false) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
         // '<tr><td><input id="input-acc" type="text" required name="field_name[]" placeholder="Escribe un Accesorio" style="border-radius:10px; outline:none; border: 1px solid #b5b0b0; padding: 4px 10px; font-size:15px; " > <button class="remove_btn" id="remove-acc" title="Eliminar" ><img src ="img/icons/dash.svg" /></button> <button class="save_btn" id="save-acc" title="Guardar" ><img src="img/icons/check-lg.svg" /></button> </td></tr>';
     </script>
