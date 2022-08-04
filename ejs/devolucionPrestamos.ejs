@@ -1,0 +1,110 @@
+
+<%- contentFor('heros')%>
+<title>Devolver Prestamos</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/devolucionPrestamo.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+<section>
+    <div class="contenedor-principal-dp">
+        <div class="section-dp">
+            <div class="cabecera-dp">
+                <h1>Baja de Prestamos</h1>
+                <input type="button" class="botonCerrar-dp" value="X" onclick="window.close()">
+            </div>
+
+            <div class="devolucion-prestamos">
+                <div class="fieldset-dp-us">
+                    <fieldset>
+                        <legend>Buscar Usuario</legend>
+
+                        <div class="dp-user-search">
+                            <select id="select-dp-us">
+                                <option value="" selected="selected" hidden>Seleccionar Option</option>
+                                <option value="1" >Numero Empleado</option>
+                                <option value="2" >Nombre Empleado</option>
+                            </select>
+
+                            <input disabled id="input-dp-us" type="text" autocomplete="off" placeholder="">
+                            <button disabled id="btn-dp-us" title="Buscar"><img src="img/icons//search.svg" width="25px"></button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="fieldset-dp-ud">
+                    <fieldset>
+                        <legend>Detalles de Usuario</legend>
+
+                        <div class="info-dp">
+                            <div class="info-dp-img">
+                                <img id="img-dp-ud" src=".jpg">
+                            </div>
+                            <dp class="labels-dp">
+                                <label id="nombre-dp-ud">Nombre</label>
+                                <label id="area-dp-ud">Area</label>
+                                <label id="cargo-dp-ud">Cargo</label>
+                                <label id="turno-dp-ud">Turno</label>
+                            </dp>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="devolucion-prestamo-table mt-3">
+                <div class="dp-table">
+                    <fieldset>
+                        <legend>Prestamos</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Label</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Serial</th>
+                                    <th class="pr-20">Descripción</th>
+                                    <th>Categoría</th>
+                                    <th class="w-17">Opción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-dp-prestamos">
+                               
+                                <tr id="tr-bp-1">
+                                    <td>180199</td>
+                                    <td>laptops</td>
+                                    <td>990118</td>
+                                    <td>025310</td>
+                                    <td>Laptop DELL</td>
+                                    <td>Notebook</td>
+                                    <td><button id="btn1-quitar-dp" class="btn-dp-quitar" title="Quitar">Quitar</button></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+
+                        <!--MENSAJE FLOTANTE PARA TR -->
+                        <div class="msg-folio" id="folio" style="display: none;">
+                            <span><strong>Folio</strong>:235689</span> <br>
+                            <span><strong>ID Folio</strong>: 990118</span>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="textarea-btn-dp">
+                <div class="text-area-dp">
+                    <textarea disabled id="textarea-dp-mb" cols="30" rows="10" placeholder="Motivo de Baja"></textarea>
+                </div>
+                <div class="btn-save-dp">
+                    <button disabled id="btn-dp-mb" title="Guardar"><img src="img/icons/box-arrow-up.svg" height="25px" width="25px" alt=""></button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/devolucionPrestamos.js"></script>
+
+</section>

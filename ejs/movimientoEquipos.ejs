@@ -1,0 +1,131 @@
+<%- contentFor ('heros')%>
+
+<link rel="stylesheet" href="css/movimientoEquipos.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-me">
+        <div class="section-me">
+            <div class="cabecera-me">
+                <h1>Movimiento Equipos</h1>
+                <input id="btn-me-cerrar" type="button" value="X" class="botonCerrar-me">
+            </div>
+
+            <div class="content-me">
+                <div class="content-me-1">
+                    <div class="content-me-be">
+                        <fieldset>
+                            <legend>Búsqueda de Equipos</legend>
+    
+                            <div class="busqueda-filtro-me">
+                                <select name="select-me" id="select-me-be">
+                                    <option value="0" selected="selected" hidden>Seleccionar Opción</option>
+                                    <option value="1">Label</option>
+                                    <option value="2">Serial</option>
+                                    <option value="3">Nombre</option>
+                                </select>
+
+                                <input disabled type="text" id="input-me" placeholder=" ">
+                                <button disabled id="btn-me-search"><img src="img/icons/search.svg" width="25px"></button>
+                            </div>
+    
+                        </fieldset>
+                    </div>
+
+                    <div class="content-me-info">
+                        <fieldset>
+                            <legend>Información Equipo</legend>
+                            
+                            <div class="content-labels">
+                                <div class="labels-me">
+                                    <label>Label</label>
+                                    <label>Descripción</label>
+                                    <label>Categoría</label>
+                                    <label>Marca</label>
+                                    <label>Modelo</label>
+                                    <label>Serial</label>
+                                    <label>Estado</label>
+                                    <label>Ubicación Actual</label>
+    
+                                </div>
+                                <div class="labels-me-2">
+                                    <label id="lbl-me-label">100112</label>
+                                    <label id="lbl-me-descripcion">Laptops Dell</label>
+                                    <label id="lbl-me-categoria">Notebook</label>
+                                    <label id="lbl-me-marca">Dell</label>
+                                    <label id="lbl-me-modelo">Presicion</label>
+                                    <label id="lbl-me-serial">789456</label>
+                                    <label id="lbl-me-estado">Activo</label>
+                                    <label id="lbl-me-ubicacion">Planta 1 </label>
+    
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+    
+                </div>
+                
+                <div class="content-me-2">
+                    <div class="content-me-ma">
+                        <fieldset>
+                            <legend>Movimiento de Área</legend>
+
+                            <div class="cont-selects">
+                                <!--Select Localcion-->
+                                <select disabled name="select-locacion" id="select-me-loc">
+                                    <option value="0" selected="selected" hidden>Seleccionar Locación</option>
+                                    <option value="1">Locación 1</option>
+                                    <option value="2">Locación 2</option>
+                                    <option value="3">Locación 3</option>
+                                </select>
+                                <!--Select Planta-->
+                                <select disabled name="select-planta" id="select-me-pla">
+                                    <option value="0" selected="selected" hidden>Selecccionar Planta</option>
+                                    <option value="1">Planta 1</option>
+                                    <option value="2">Planta 2</option>
+                                    <option value="3">Planta 3</option>
+    
+                                </select>
+
+                                <!--Select Edificio-->
+                                <select disabled name="select-edificio" id="select-me-edi">
+                                    <option value="0" selected="selected" hidden>Seleccionar Edificio</option>
+                                    <option value="1">Edificio 1</option>
+                                    <option value="2">Edificio 2</option>
+                                    <option value="3">Edificio 3</option>
+
+                                </select>
+
+                                <!--Select Area-->
+                                <select disabled name="select-area" id="select-me-are">
+                                    <option value="0" selected="selected" hidden>Seleccionar Área</option>
+                                    <option value="1">Area 1</option>
+                                    <option value="2">Area 2</option>
+                                    <option value="3">Area 3</option>
+                                        
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="content-me-mm">
+                        <div class="content-ta">
+                            <textarea disabled id="textarea-me" cols="30" rows="6" placeholder="Motivo"></textarea>
+                        </div>
+                        <div class="content-btn">
+                            <button disabled id="btn-me-save"><img src="img/icons/box-arrow-up.svg" width="25px"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/movimientoEquipos.js"></script>
+</section>

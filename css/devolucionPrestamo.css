@@ -1,14 +1,9 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-}
-
-body{
-    overflow: hidden;
 }
 
 /*Baja Prestamos*/
@@ -22,10 +17,9 @@ body{
 }
 
 .section-dp{
-    width: 90%;
-    height: 90vh;
+    width: 65%;
+    height: 94%;
     margin: auto;
-    margin-top: 20px;
     border-bottom: 1px solid rgb(165, 165, 165);
     border-top: 1px solid #b5b0b0;
     border-left: 1px solid #b5b0b0;
@@ -38,6 +32,7 @@ body{
 .cabecera-dp{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 30px;
 }
 
@@ -50,13 +45,18 @@ body{
 }
 
 .botonCerrar-dp{
-    width: 45px;
-    height: 32px;
+    padding: 4px 16px;
     background-color: rgb(248, 86, 86);
     color: white;
     border: 1px solid #a7a79b;
-    border-radius: 12px;
+    border-radius: 16px;
     transition: .4s;
+    font-weight: 600;
+}
+
+.botonCerrar-dp:hover{
+    background-color: transparent;
+    color: black;
 }
 
 .devolucion-prestamos{
@@ -65,18 +65,18 @@ body{
 }
 
 .fieldset-dp-us{
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .fieldset-dp-us fieldset{
     border: 2px solid #b5b0b0;
     border-radius: 10px;
-    width: 400px;
+    width: 300px;
     height: 240px;
 }
 
 .fieldset-dp-us fieldset legend{
-    float: none !important;
+    width: fit-content;
     margin-left: 10px !important;
     font-size: 18px;
     user-select: none;
@@ -86,25 +86,32 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-    margin-top: 15px;
 }
 
 .dp-user-search select{
-    padding: 7px 28px;
-    border-radius: 10px;
+    width: 200px;
+    padding: 10px 15px;
+    border-radius: 16px;
     text-align: justify;
     outline: none;
     font-size: 16px;
     
 }
+
 .dp-user-search input{
+    width: 200px;
     text-align: center;
-    padding: 8px;
-    border-radius: 10px;
+    padding: 7px 5px;
+    border-radius: 16px;
     outline: none;
     border: 1px solid #1a1515;
-    font-size: 15px;
+    font-size: 16px;
+    margin-top: 26px;
+    text-transform: uppercase;
+}
+
+.dp-user-search input::placeholder{
+    text-transform: none;
 }
 
 .dp-user-search #btn-dp-us{
@@ -113,7 +120,7 @@ body{
     text-decoration: none;
     outline: none;
     padding: 7px 17px;
-    margin-top: 30px;
+    margin-top: 25px;
     border-radius: 18px;
     border: none;
     background-color: white;
@@ -129,11 +136,11 @@ body{
 }
 
 .fieldset-dp-ud{
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .fieldset-dp-ud fieldset{
-    width: 600px;
+    width: 500px;
     height: 240px;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
@@ -142,43 +149,44 @@ body{
 
 .fieldset-dp-ud fieldset legend{
     font-size: 18px;
-    float: none !important;
+    width: fit-content;
     margin-left: 10px !important;
     user-select: none;
 }
 
 .info-dp{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 180px;
 }
 
 .info-dp-img{
-    width: 50%;
-    height: 21vh;
-    padding-top: 2px;
+    width: 40%;
+    margin-left: 25px;
 }
 
 .info-dp-img img{
-    max-width: 51%;
+    width: 85%;
+    height: 98%;
     border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 15px;
 }
 
 .labels-dp{
     display: grid;
     align-content: space-evenly;
-    text-align: center;
+    text-align: end;
     font-weight: 600;
-    margin-right: 22px;
 }
 
 .labels-dp label{
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
-    padding: 5px 20px;
+    padding: 3px 20px;
     user-select: none;
     margin: 2px;
+    position: relative;
+    bottom: 8px;
+    right: 8px;;
 }
 
 .devolucion-prestamo-table{
@@ -188,57 +196,112 @@ body{
 }
 
 .dp-table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin: auto;
 }
 
 .dp-table fieldset{
-    width: 1035px;
-    height: 260px;
+    width: 848px;
+    height: 250px;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
-    overflow-y: auto;
+    position: relative;
 }
 
 .dp-table fieldset legend{
     font-size: 18px !important;
-    float: none !important;
+    width: fit-content;
     margin-left: 10px !important;
     user-select: none;
 }
 
+/*Modificacion de tabla*/
 .dp-table table{
     border-collapse: collapse;
-    width: 1010px;
+    width: 100%;
     margin: auto;
     border-right: 2px solid #f9fafb;
     border-left: 2px solid #f9fafb;
     user-select: none;
-    margin-top: 12px;
+}
+
+/*Estilos para el thead y el tbody*/
+.dp-table table thead {
+    display: block;
+}
+
+.dp-table table tbody{
+    display: block;
+    height: 150px;
+    overflow-y: auto;
 }
 
 .dp-table table th{
     background-color: rgb(110 187 231 / 58%);
     color: black;
-    padding: 10px 15px;
-    padding-right: 30px;
+    padding: 10px 32px;
 }
 
+/*ESTILOS PARA TR DE LAS TABLA*/
+
+#table-dp-prestamos tr{
+    transition: 0.3s;
+    display: table;
+    width: 100%;
+}
+
+#table-dp-prestamos tr:hover{
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/*ESTILOS PARA EL MENSAJE DEL TR*/
+.msg-folio{
+    width: 140px;
+    height: 60px;
+    position: absolute;
+    left: -140px;
+    top: 22%;
+    background-color: #fff;
+    border-top-left-radius: 40px 40px;
+    padding: 6px 16px;
+    border: 1px solid #86acc1;
+}
+
+.msg-folio span{
+    font-size: 12px;
+    user-select: none;
+}
+
+/*Clase para  th vacio*/
+.w-17{
+    width: 17% !important;
+}
+
+ /*Clase para description*/
+.pr-20{
+    padding-right: 20px !important;
+}
+
+
 .dp-table table td{
-    padding-left: 40px;
+    padding-left: 34px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+
 .btn-dp-quitar{
     text-decoration: none;
-    padding: 4px 6px;
+    padding: 3px 6px;
     border: 1px solid rgb(36 31 31 / 65%);
     background-color: transparent;
     color: #1a1515;
     border-radius: 10px;
     transition: .4s;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .btn-dp-quitar:hover{
@@ -246,21 +309,19 @@ body{
     border: 1px solid white;
 }
 
-
 .textarea-btn-dp{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    padding-top: 10px;
+    margin-top: 30px;
 }
 
 .text-area-dp{
-    margin-right: 350px;
+    margin-right: 264px;
 }
 
 .text-area-dp textarea{
-    width: 600px;
-    height: 200px;
+    width: 500px;
+    height: 185px;
     padding: 20px;
     border-radius: 10px;
     outline: none;
@@ -279,7 +340,7 @@ body{
     align-items: center;
     margin-left: 16px;
     position: relative;
-    right: 320px;
+    right: 238px;
 }
 
 .btn-save-dp button{
@@ -295,27 +356,45 @@ body{
     background-color: rgb(110 187 231 / 58%);
 }
 
-/*Estilos responsivos Surface Pro 7*/
+@media screen and (max-width:1600px) {
+    .section-dp{
+        width: 80%;
+    }
+    
+}
 
-@media screen and (max-width:912px) {
+/*Estilos responsivos Surface Pro 7*/
+@media screen and (max-width:1368px) {
+    .section-dp{
+        width: 93%;
+        height: 93.5%;
+    }
+    
+}
+
+@media screen and (max-width:912px), screen and (orientation: portrait) {
     .section-dp{
         width: 95% !important;
     }
 
     .fieldset-dp-us fieldset{
-        width: 350px !important;
+        width: 260px !important;
     }
 
     .fieldset-dp-ud fieldset{
-        width: 450px !important;
+        width: 360px !important;
     }
 
     .dp-table fieldset{
-        width: 830px;
+        width: 660px;
     }
 
-    .dp-table table{
-        width: 820px;
+    .dp-table table td{
+        padding-left: 10px;
+    }
+
+    .btn-dp-quitar{
+        padding: 2px 6px;
     }
 
     .labels-dp{
@@ -323,21 +402,16 @@ body{
         margin-top: 10px;
         align-content: stretch;
     }
-
-    .info-dp-img{
-        height: auto;
-    }
-
-    .info-dp-img img{
-        max-width: 61%;
-        margin-top: 18px;
-    }
     
     .text-area-dp{
-        margin-right: 150px !important;
+        margin-right: 85px !important;
     }
     .btn-save-dp{
         position: relative;
-        right: 120px !important;
+        right: 70px !important;
     }
+    .dp-table table th{
+        padding: 10px 23px;
+    }
+
 }

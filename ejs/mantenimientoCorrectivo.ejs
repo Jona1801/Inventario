@@ -1,0 +1,134 @@
+<%- contentFor ('heros')%>
+
+<link rel="stylesheet" href="css/mantenimientoCorrectivo.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-mc">
+        <div class="section-mc">
+            <div class="cabecera-mc">
+                <h1>Mantenimiento Correctivo</h1>
+                <input id="btn-mc-cerrar" type="button" value="X">
+            </div>
+
+            <div class="content-mc">
+                <!--Primer Contenedor-->
+                <div class="content-mc-1">
+                    <div class="content-mc-be">
+                        <fieldset>
+                            <legend>Buscar Equipo</legend>
+
+                            <div class="busqueda-filtro-mc">
+                                <select name="select-mc" id="select-mc-be">
+                                    <option value="0" selected="selected" hidden>Select Option</option>
+                                    <option value="1">Label</option>
+                                    <option value="2">Serial</option>
+                                    <option value="3">Nombre</option>
+                                </select>
+
+                                <input disabled id="input-mc" type="text">
+                                <button disabled id="btn-mc-search" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="content-mc-mod">
+                        <fieldset>
+                            <legend>Modificar</legend>
+
+                            <div class="content-lbl-slc-save">
+                                <!--Contenedor Labels-->
+                                <div class="mc-labels">
+                                    <label>Label</label>
+                                    <label>Categoria</label>
+                                    <label class="mt-8">Marca</label>
+                                    <label class="mt-18">Modelo</label>
+                                    <label class="mt-16">Serial</label>
+
+                                </div>
+
+                                <!--Content Selects-->
+                                <div class="content-slc">
+                                    <label id="lbl-mc-label">100112</label>
+                                    <label id="lbl-mc-categoria">Laptops</label>
+                                    <select disabled name="select-marca" id="select-mc-marca" class="p-8-19">
+                                        <option value="0" >Select Marca</option>
+                                        <option value="1">Dell</option>
+                                        <option value="2">HP</option>
+                                    </select>
+                                    <select disabled name="select-modelo" id="select-mc-modelo">
+                                        <option value="0">Select Modelo</option>
+                                        <option value="1">Precision 520</option>
+                                        <option value="2">Pavillon</option>
+                                    </select>
+                                    <input disabled type="text" id="input-mc-slc" placeholder="Numero Serial" onkeypress="return letrasNum(event)">
+                                    <button disabled id="btn-mc-mod" title="Modificar Datos">Editar</button>
+                                </div>
+
+                                <hr>
+
+                                <!--Content Save-->
+                                <div class="mc-save">
+                                    <div class="mc-ta">
+                                        <textarea disabled id="textarea-mc-mod" cols="30" rows="10" placeholder="Agregar Nota"></textarea>
+                                    </div>
+                                    <div class="mc-btn">
+                                        <button disabled id="btn-save-mc" title="Guardar">Guardar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+
+                <!--Segundo Contenedor-->
+                <div class="content-mc-2">
+                    <div class="content-table-mc">
+                        <fieldset>
+                            <legend>Equipos</legend>
+
+                            <div class="table-mc-equipos">
+                                <table>
+                                    <thead id="thead-mc">
+                                        <tr>
+                                            <th>Label</th>
+                                            <th>Serial</th>
+                                            <th>Categoria</th>
+                                            <th>Modelo</th>
+                                            <th>Marca</th>
+                                            <th>Movimientos</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tbody-mc">
+                                        <!--
+                                        <tr>
+                                            <td>2100001</td>
+                                            <td>MXLAD4307</td>
+                                            <td>Terminal</td>
+                                            <td>T640 Plus</td>
+                                            <td>HP</td>
+                                            <td>Cambios</td>
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/mantenimientoCorrectivo.js"></script>
+
+
+</section>

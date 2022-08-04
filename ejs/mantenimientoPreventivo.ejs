@@ -1,0 +1,108 @@
+<%- contentFor ('heros')%>
+
+<link rel="stylesheet" href="css/mantenimientoPreventivo.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-mp">
+        <div class="section-mp">
+            <div class="cabecera-mp">
+                <h1>Mantenimiento Preventivo</h1>
+                <input id="btn-mp-cerrar" type="button" value="X">
+            </div>
+
+            <div class="content-mp">
+                <!--Primer Contenedor-->
+                <div class="content-mp-1">
+                    <div class="content-mp-be">
+                        <fieldset>
+                            <legend>Buscar Equipo</legend>
+
+                            <div class="busqueda-filtro-mp">
+                                <select name="select-mp" id="select-mp-be">
+                                    <option value="0" selected="selected" hidden>Seleccionar Opción</option>
+                                    <option value="1">Label</option>
+                                    <option value="2">Serial</option>
+                                    <option value="3">Nombre</option>
+                                </select>
+
+                                <input disabled id="input-mp" type="text" placeholder="">
+                                <button disabled id="btn-mp-search" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                            </div>
+
+                        </fieldset> 
+                    </div>
+
+                    <div class="content-mp-mod">
+                        <fieldset>
+                            <legend>Modificar</legend>
+
+                            <div class="content-lbl-save">
+                                <div class="content-labels-mp">
+                                    <label id="lbl-mp-label">Label</label>
+                                    <label id="lbl-mp-categoria">Categoria</label>
+                                    <label id="lbl-mp-marca">Marca</label>
+                                    <label id="lbl-mp-modelo">Modelo</label>
+                                    <label id="lbl-mp-serial">Serial</label>
+
+                                </div>
+
+                                <div class="content-save">
+                                    <div class="ta-mp">
+                                        <textarea disabled id="textarea-mp-mod" cols="30" rows="10" placeholder="Agregar Nota"></textarea>
+                                    </div>
+                                    <div class="btn-mp">
+                                        <button disabled id="btn-save-mp" title="Guardar">Guardar</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!--Segundo Contenedor-->
+                <div class="content-mp-2">
+                    <div class="contenet-table">
+                        <fieldset>
+                            <legend>Equipos</legend>
+
+                            <div class="tabla-mp-equipos">
+                                <table>
+                                    <thead  id="thead-mp">
+                                        <tr>
+                                            <th>Label</th>
+                                            <th>Serial</th>
+                                            <th>Categoría</th>
+                                            <th>Modelo</th>
+                                            <th>Marca</th>
+                                            <th>Movimientos</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tbody-mp">
+                                        <!--
+                                        <tr>
+                                            <td>21000001</td>
+                                            <td>MXLAD43707</td>
+                                            <td>Terminal</td>
+                                            <td>T640 PLUS</td>
+                                            <td>HP</td>
+                                            <td>Cambios </td>
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/mantenimientoPreventivo.js"></script>
+</section>

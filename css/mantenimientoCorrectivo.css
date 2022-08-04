@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor-principal-mc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-mc{
+    width: 74%;
+    height: 85%;
+    margin: auto;
+    border-top: 1px solid #b5b0b0;
+    border-bottom: 1px solid #b5b0b0;
+    border-right: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-radius: 12px;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+    background-color: #fff;
+}
+
+.cabecera-mc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+.cabecera-mc h1{
+    font-size: 25px;
+    color: #7a7a78;
+    user-select: none;
+    font-weight: 500;
+}
+
+#btn-mc-cerrar{
+    padding: 3px 17px;
+    background-color: #f85656;
+    color: #fff;
+    border: 1px solid #b5b0b0;
+    border-radius: 16px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+#btn-mc-cerrar:hover{
+    background-color: transparent;
+    color: #000;
+}
+
+.content-mc-1{
+    display: flex;
+    justify-content: center;
+}
+
+.content-mc-be{
+    margin-right: 25px;
+}
+
+.content-mc-be fieldset{
+    width: 270px;
+    height: 294px;
+    border: 2px solid #b5b0b0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-mc-be fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 10px;
+    user-select: none;
+    margin-bottom: 6px;
+}
+
+.busqueda-filtro-mc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#select-mc-be{
+    width: 200px;
+    padding: 10px 24px;
+    outline: none;
+    border-radius: 14px;
+    text-align: justify;
+    font-size: 17px;
+    border: 1px solid #b5b0b0;
+}
+
+#input-mc{
+    width: 200px;
+    padding: 7px 15px;
+    margin-top: 28px;
+    border-radius: 16px;
+    outline: none;
+    border: 1px solid #b5b0b0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#input-mc::placeholder{
+    text-transform: none;
+    font-size: 17px;
+}
+
+#btn-mc-search{
+    padding: 7px 17px;
+    border-radius: 18px;
+    margin-top: 32px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .4s;
+}
+
+
+.content-mc-mod{
+    margin-left: 25px;
+}
+
+.content-mc-mod fieldset{
+    width: 640px;
+    height: 294px;
+    border: 2px solid #b5b0b0;
+    border-radius: 12px;
+}
+
+.content-mc-mod fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    user-select: none;
+    margin-bottom: 4px;
+    margin-left: 10px;
+}
+
+.content-lbl-slc-save{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.mc-labels{
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mc-labels label{
+    padding: 4px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px;
+    padding-left: 14px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-18{
+    margin-top: 18px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.content-slc{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 14px;
+}
+
+.content-slc label{
+    padding: 4px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px;
+    padding-left: 14px;
+    text-transform: uppercase;
+    user-select: none;
+    text-align: end;
+}
+
+.content-slc select{
+    margin-top: 4px;
+    padding: 8px 16px;
+    outline: none;
+    border-radius: 16px;
+    text-align: justify;
+    font-size: 16px;
+    border: 1px solid #b5b0b0;
+    margin-bottom: 10px;
+}
+
+.p-8-19{
+    padding: 8px 19px !important;
+}
+
+#input-mc-slc{
+    width: 160px;
+    padding: 5px 16px;
+    outline: none;
+    border: 1px solid #b5b0b0;
+    border-radius: 16px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#input-mc-slc::placeholder{
+    text-transform: none;
+    font-size: 16px;
+}
+
+.mc-save{
+    width: 52%;
+}
+.mc-ta{
+    display: flex;
+    justify-content: center;
+    padding-left: 8px;
+}
+
+#btn-mc-mod{
+    margin-top: 10px;
+    margin-right: 4px;
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 16px;
+    border: 1px solid #b5b0b0;
+    outline: none;
+    transition: .4s;
+    text-decoration: none;
+}
+
+#btn-mc-mod:hover{
+    background-color: #6ebbe799;
+    border: 1px solid #fff;
+}
+
+hr{
+    width: 2px;
+    height: 250px;
+    background-color: #999696;
+    margin-top: 0;
+    position: relative;
+    left: 5px;
+}
+
+#textarea-mc-mod{
+    width: 290px;
+    height: 180px;
+    padding: 16px;
+    border: 1px solid #b5b0b0;
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px 1px #b5b0b0;
+    font-size: 17px;
+    outline: none;
+    resize: none;
+}
+
+#textarea-mc-mod::placeholder{
+    font-size: 17px;
+}
+.mc-btn{
+    display: flex;
+    justify-content: start;
+    padding-left: 32px;
+}
+
+#btn-save-mc{
+    margin-top: 18px;
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 16px;
+    border: 1px solid #b5b0b0;
+    outline: none;
+    transition: .4s;
+    text-decoration: none;
+}
+
+#btn-save-mc:hover{
+    background-color: #6ebbe799;
+    border: 1px solid #fff;
+}
+
+.content-mc-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.content-table-mc fieldset{
+    width: 960px;
+    height: 280px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.content-table-mc fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 10px;
+    user-select: none;
+}
+
+/*Estilos para tabla*/
+.table-mc-equipos table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-mc-equipos table thead{
+    position: sticky;
+    top: 0;
+    background-color: #6ebbe759;
+    width: 100%;
+    user-select: none;
+    display: table;
+}
+
+th{
+    width: 10%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+    padding: 7px 0;
+    user-select: none;
+}
+
+#tbody-mc{
+    display: block;
+    height: 180px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-mc-equipos tbody tr{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+
+
+/*Estilos Responsivos para tablet Surface Pro 7*/
+@media screen and (max-width:1368px) {
+    .section-mc{
+        width: 94%;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .section-mc{
+        width: 98%;
+    
+    }
+
+    .content-mc-be {
+        margin-right: 10px;
+    }
+
+    .content-mc-be fieldset{
+        width: 250px;
+    }
+
+    .content-mc-mod {
+        margin-left: 10px;
+    }
+
+    .content-mc-mod fieldset{
+        width: 630px;
+    }
+
+    .content-table-mc fieldset{
+        width: 900px;
+    }
+    
+}
+
+@media screen and (max-width:912px), screen and (orientation:portrait) {
+    .content-mc-be{
+        margin-right: 5px;
+    }
+
+    .content-mc-be fieldset{
+        width: 196px;
+    }
+
+    #select-mc-be{
+        width: 174px;
+    }
+
+    #input-mc{
+        width: 176px;
+    }
+
+    .content-mc-mod{
+        margin-left: 8px;
+    }
+
+    .content-mc-mod fieldset{
+        width: 480px;
+        height: 296px;
+    }
+    
+    .mc-labels{
+        width: 22%;
+    }
+
+    .content-slc{
+        width: 38%;
+    }
+
+    .mc-save{
+        width: 40%;
+    }
+
+    #textarea-mc-mod{
+        width: 160px;
+        box-shadow: 0px 2px 6px 1px #b5b0b0;
+    }
+
+    .mc-btn{
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .content-table-mc fieldset{
+        width: 685px;
+    }
+
+    hr{
+        left: 3px;
+    }
+}

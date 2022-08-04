@@ -1,0 +1,141 @@
+<%- contentFor('heros')%>
+<title>Consulta Assets</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/consultaAssets.css">
+<link rel="stylesheet" href="css/menu.css">
+
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-ca">
+        <div class="section-consultAssets">
+            <div class="cabecera-ca">
+                <h1>Consulta de Assets</h1>
+                <input type="button" class="botonCerrar-ca" value="X">
+            </div>
+
+            <div class="consultas-assets">
+                <div class="field-ca-be">
+                    <fieldset>
+                        <legend>Busqueda de Equipos</legend>
+
+                        <div class="busqueda-equipos-ca">
+                            <select name="select-ca" id="select-ca-be">
+                                <option value="0" selected="selected" hidden>Select Option</option>
+                                <option value="1">Label</option>
+                                <option value="2">Serial</option>
+                                <option value="3">Nombre</option>
+                            </select>
+                            <input disabled id="input-ca" type="text" autocomplete="off">
+                            <button disabled id="btn-ca-be" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="field-ca-ea">
+                    <fieldset>
+                        <legend>Equipo Asignado a:</legend>
+
+                        <div class="info-ca">
+                            <div class="info-ca-img">
+                                <img id="img-ca-ea" src=".jpg">
+                            </div>
+                            <div class="info-ca-labels">
+                                <label id="idEmpleado-ca-ea">Id Empleado</label>
+                                <label id="nombre-ca-ea">Nombre</label>
+                                <label id="area-ca-ea">Area</label>
+                                <label id="puesto-ca-ea">Puesto</label>
+                                <label id="turno-ca-ea">Turno</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="fieldset-table-ca">
+                <fieldset>
+                    <legend>Equipos</legend>
+
+                    <div class="contenedor-tablas">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <button class="nav-link" id="btn-info-ca" onclick="openInfo('informacion-e')" data-bs-toggle="tab" type="button" role="tab" >Información Actual</button>
+                              <button class="nav-link" id="btn-historial-ca" onclick="openInfo('historial-e')" data-bs-toggle="tab" type="button" role="tab" >Historial de Equipo</button>
+                              
+                            </div>
+                        </nav>
+                        
+                            <div class="equipos" id="informacion-e" >
+                                <table>
+                                    <thead id="thead-ca-ia">
+                                        <tr>
+                                            <th>Label</th>
+                                            <th>Marca</th>
+                                            <th>Modelo</th>
+                                            <th>Serie</th>
+                                            <th>Descripcion</th>
+                                            <th>Categoria</th>
+                                            <th>Estado</th>
+                                            <th class="pr-12">Ubicacion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-ca-ia">
+                                    <!-- 
+                                        <tr>
+                                            <td>100112</td>
+                                            <td>Dell</td>
+                                            <td>M23L45</td>
+                                            <td>789456</td>
+                                            <td>Laptop Dell</td>
+                                            <td>Notebook</td>
+                                            <td>Activo</td>
+                                            <td>Edificio 1 Shipping</td>
+                                        </tr>
+                                    -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+
+                        <div class="equipos" id="historial-e" style="display:none">
+                            <table class="table-historial">
+                                <thead id="thead-ca-historial">
+                                  <tr>
+                                    <th>Label</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Serie</th>
+                                    <th>Ubicaciones</th>
+                                    <th>Asignaciones</th>
+                                    <th class="pr-12">Notas</th>
+                                    <th class="pr-12">Movimientos</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody id="table-ca-historial">
+                                    <!--
+                                    <tr>
+                                        <td>110010</td>
+                                        <td>Dell</td>
+                                        <td>Precision 5820</td>
+                                        <td>123456</td>
+                                        <td>Edificio 2 </td>
+                                        <td>3 Asigns</td>
+                                        <td>Activo</td>
+                                        <td> 2 Movs </td>
+                                    </tr>
+                                   -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/consultaAssets.js"></script>
+
+</section>
+

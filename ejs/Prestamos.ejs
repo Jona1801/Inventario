@@ -1,0 +1,173 @@
+
+<%- contentFor('heros')%>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/prestamos.css">
+<title>Generar Prestamos</title>
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="js/datetimepicker-master/jquery.datetimepicker.css">
+
+<div id="menu"></div>
+<section>
+    <div class="contenedor-principal-prestamos">
+        <div class="section-prestamos">
+            <div class="cabecera-pres">
+                <h1>Generar Préstamo Nuevo</h1>
+                <input type="button" value="X" class="botonCerrar-pn" onclick="window.close()">
+            </div>
+            <div class="container-prestamos">
+                <div class="section1-pres">
+                    <div class="fieldset1-gpn">
+                        <fieldset>
+                            <legend>Buscar</legend>
+
+                            <div class="select-search-gpn">
+                                <div class="select-gpn">
+                                    <select id="select-gpn" >
+                                        <option value="" selected="selected" hidden>Seleccionar Opción</option>
+                                        <option value="0">Num. Empleado</option>
+                                        <option value="1">Nombre Empleado</option>
+                                    </select>
+                                </div>
+                                <div class="search-gpn">
+                                    <input disabled id="input-gpn" type="text" required autocomplete="off">
+                                    <button disabled id="btn-search-gpn" title="Buscar">Buscar</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <div class="fieldset2-gpn">
+                        <fieldset>
+                            <legend>Información de Usuario</legend>
+
+                            <div class="info-gpn">
+                                <div class="img-gpn">
+                                    <img id="img-gpn-iu" src=".jpg" alt="">
+                                </div>
+                                <div class="labels-gpn">
+                                    <label id="nombre-gpn-iu">Nombre</label>
+                                    <label id="area-gpn-iu">Área</label>
+                                    <label id="puesto-gpn-iu">Puesto</label>
+                                    <label id="turno-gpn-iu">Turno</label>
+                                    <label id="lenderId" hidden></label>
+                                </div>
+                            </div>
+                            <div class="gpn-table">
+                                <label for="">Historial de Prestamos</label>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-10">Etiqueta</th>
+                                            <th>Modelo</th>
+                                            <th>Fecha</th>
+                                            <th>Categoría</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-gpn-iu">
+                                        <!--
+                                        <tr>
+                                            <td>100112</td>
+                                            <td>Precision 5820</td>
+                                            <td>05-07-22</td>
+                                            <td>Desktop</td>
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="section2-pres">
+                    <div class="fieldset3-gpn">
+                        <fieldset>
+                            <legend>Buscar Equipo</legend>
+
+                            <div class="search-gpn-be">
+                                <input disabled type="text" id="input-gpn-be" onkeypress="return soloNumeros(event)" maxlength="10" placeholder=" Label">
+                                <button disabled id="btn-gpn-be" title="Buscar">Buscar</button>
+                            </div>
+
+                            <div class="table-gpn-be">
+                                <label for="">Equipos para prestamos</label>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Marca</th>
+                                            <th>Modelo</th>
+                                            <th>Serial</th>
+                                            <th class="pr-20">Descripción</th>
+                                            <th class="pr-32">Categoría</th>
+                                            <th>Opción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-gpn-be">
+                                        <!--
+                                       <tr id="fil-gpn-be">
+                                            <td>100112</td>
+                                            <td>DELL</td>
+                                            <td>180199</td>
+                                            <td>105110</td>
+                                            <td>Laptop HP</td>
+                                            <td>Notebook</td>
+                                            <td><button id="btn-gpn-quitar" class="btn-quitar">Quitar</button></td>
+                                        </tr>
+                                        -->
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <div class="acces-fechas-gpn">
+                        <div class="table-accesorios">
+                            <fieldset>
+                                <legend>Accesorios</legend>
+
+                                <table class="table-acc">
+                                    <thead>
+                                    </thead>
+                                    <tbody id="tbody-acc">
+                                        <tr id="tr-gpn-1">
+                                            <td id="td-col-1-1"></td>
+                                            <td id="td-col-2-1"><button disabled class="btn-acces" id="add-gpn-1" onclick="agregarAcc(this)" title="">+</button></td>
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                            </fieldset>
+
+                        </div>
+
+                        <div class="periodos">
+                            <fieldset>
+                                <legend>Período de Uso</legend>
+
+                                <div class="fechas-prestamos">
+                                    <input disabled id="inicio-gpn-pu" type="text" title="Fecha Inicio" value="mm/dd/yyyy --:-- --" required>
+                                    <input disabled id="final-gpn-pu" type="text" class="mt-acces" title="Fecha Final" value="mm/dd/yyyy --:-- --" required>
+                                </div>
+                                
+                            </fieldset>  
+                        </div>
+
+                        <div class="agregar-prestamo">
+                            <button disabled id="btn-agregar-gpn" title="Agregar Prestamo">Agregar</button>
+                        </div>  
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/datetimepicker-master/jquery.js"></script>
+    <script src="js/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/prestamos.js"></script>
+    
+</section>

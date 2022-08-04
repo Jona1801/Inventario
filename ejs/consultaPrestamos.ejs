@@ -1,0 +1,97 @@
+<%- contentFor('heros')%>
+
+<title>baja asign</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/consultaPrestamos.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+<section>
+    <div class="contenedor-principal-cp">
+        <div class="section-consultaPres">
+            <div class="cabecera-consultaPres">
+                <h1>Consulta de Prestamos</h1>
+                <input type="button" class="botonCerrar-cp" value="X" onclick="window.close()">
+            </div>
+
+            <div class="consulta-prestamo mb-3">
+                <div class="contenido-consultaPres">
+                    <fieldset>
+                        <legend>Search</legend>
+
+                        <div class="search-consultaPres">
+                            <select id="cp-search-select">
+                                <option value="" selected="selected" hidden>Select Option</option>
+                                <option value="1">Numero Empleado</option>
+                                <option value="2">Nombre Empleado</option>
+                            </select>
+                            <input disabled id="cp-search-input" type="text" autocomplete="off" placeholder="">
+                            <button disabled id="cp-btn-search" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="user-consultaPres">
+                    <fieldset>
+                        <legend>User Details</legend>
+
+                        <div class="userDetail-consultaPres">
+                            <div id="img-consultaPres">
+                                <img id="cp-ud-imagen" src=".jpg" >
+                            </div>
+                            <div id="cp-labels">
+                                <label id="cp-ud-nombre">Nombre</label>
+                                <label id="cp-ud-area">Area</label>
+                                <label id="cp-ud-cargo">Cargo</label>
+                                <label id="cp-ud-turno">Turno</label>
+                                <label id="lenderId" hidden></label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="consultaPres-table">
+                <div class="cp-table">
+                    <fieldset>
+                        <legend>Assigned</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Label</th>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>Serial</th>
+                                    <th>Description</th>
+                                    <th  class="pr-5">Category</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cp-assigned">
+                               <!--
+                                <tr>
+                                    <td>1234565</td>
+                                    <td>Dell</td>
+                                    <td>546789</td>
+                                    <td>123456</td>
+                                    <td>123456789</td>
+                                    <td>Laptops</td>
+                                </tr>
+                                -->
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="cp-botones">
+                <button disabled id="cp-btn-pdf" title="Ver Pdf"><img src="img/icons/file-earmark-pdf.svg" width="25px" height="27px"></button>
+                <button disabled id="cp-btn-signature" title="Firmar"><img src="img/icons/firmar.png" width="25px" ></img></button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/consultaPrestamos.js"></script>
+    
+</section>

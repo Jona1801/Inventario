@@ -1,0 +1,354 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;   
+}
+
+.contenedor-principal-ca{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-consultAssets{
+    width: 75%;
+    height: 90%;
+    margin: auto;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    border-top: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-right: 1px solid #b5b0b0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+}
+
+.cabecera-ca{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.cabecera-ca h1{
+    text-decoration: none;
+    user-select: none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #7a7a78;
+}
+
+.botonCerrar-ca{
+    width: 45px; height: 32px;
+    background-color: #f85656;
+    border: 1px solid #a7a79b;
+    color: white;
+    border-radius: 16px;
+    transition: .4s;
+    cursor: pointer;
+}
+.botonCerrar-ca:hover{
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+}
+
+.consultas-assets{
+    display: flex;
+    justify-content: center;
+}
+
+.field-ca-be{
+    margin-right: 22px;
+}
+
+.field-ca-ea{
+    margin-left: 22px;
+}
+
+.field-ca-be fieldset{
+    width: 300px;
+    height: 240px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.field-ca-be fieldset legend{
+    font-size: 18px;
+    width: fit-content;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.field-ca-ea fieldset{
+    width: 500px;
+    height: 240px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.field-ca-ea fieldset legend{
+    font-size: 18px;
+    width: fit-content;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.busqueda-equipos-ca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.busqueda-equipos-ca #select-ca-be{
+    width: 200px;
+    padding: 9px 24px;
+    outline: none;
+    text-align: justify;
+    font-size: 16px;
+    border: 1px solid #b5b0b0;
+    border-radius: 12px;
+
+}
+
+.busqueda-equipos-ca #input-ca{
+    margin-top: 28px;
+    padding: 7px 5px;
+    width: 200px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid #b5b0b0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#input-ca::placeholder{
+    text-transform: none;
+}
+
+.busqueda-equipos-ca #btn-ca-be{
+    text-decoration: none;
+    outline: none;
+    padding:7px 17px;
+    margin-top: 25px;
+    border-radius: 18px;
+    border: none;
+    background: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .4s;
+
+}
+
+.info-ca{
+    display: flex;
+    justify-content: space-between;
+    height: 180px;
+}
+
+.info-ca-img{
+    width: 40%;
+    margin-left: 25px;
+}
+
+#img-ca-ea{
+    width: 85%;
+    height: 98%;
+    border-radius: 20px;
+}
+
+.info-ca-labels{
+    width: 60%;
+    display: grid;
+    text-align: end;
+    font-weight: 600;
+    align-content: space-evenly;
+    user-select: none;
+}
+
+.info-ca-labels label{
+    font-size: 15px;
+    padding: 3px 20px;
+    margin: 2px;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 8px;
+    right: 10px;
+}
+
+/*Estilos de Tabla*/
+.fieldset-table-ca{
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+.fieldset-table-ca fieldset{
+    width: 850px;
+    height: 382px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.fieldset-table-ca fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;}
+
+.nav-link{
+    display: block;
+    padding: 0.5rem 1rem !important;
+    transition: .2s;
+    color: black;
+    background: 0 0;
+    border-top-left-radius: 0.30rem;
+    border-top-right-radius: 0.30rem;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover{
+    border-color: #e9ecef #e9ecef #dee2e6;
+    isolation: isolate;
+}
+
+
+
+/*Primer tabla*/
+.equipos table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.equipos table thead{
+    position: sticky;
+    top: 0;
+    border-bottom: 1.3px solid #b5b0b0;
+    background-color: #6ebbe759;
+    display: table;
+    width: 100%;
+    user-select: none;
+}
+
+ th{
+    width: 10%;
+    padding: 8px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+    padding: 7px 0;
+}
+
+#table-ca-ia{
+    display: block;
+    height: 245px;
+    overflow-y: auto;
+    width: 100%;
+}
+.equipos tbody tr{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+/*Segunda tabla*/
+.table-historial{
+    border-collapse: collapse !important;
+    width: 100%;
+}
+
+.table-historial thead{
+    position: sticky !important;
+    top: 0 !important;
+    border-bottom: 1.3px solid #b5b0b0 !important;
+    background-color: #6ebbe759 !important;
+    display: table !important;
+    width: 100% !important;
+    user-select: none;
+}
+
+.table-historial th{
+    text-align: center;
+    width: 14.1%;
+    padding: 8px 0;
+}
+
+.table-historial td{
+    text-align: center;
+    padding: 7px 0 !important;
+}
+
+.pr-12{
+    padding-right: 12px !important;
+}
+.pr-16{
+    padding-right: 16px !important;
+}
+
+#table-ca-historial{
+    display: block;
+    height: 245px !important;
+    overflow-y: auto;
+    width: 100%;
+}
+.table-historial tbody tr{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+/*Estilos responsivos Surface Pro 7 */
+@media screen and (max-width:1368px) {
+    .section-consultAssets{
+        width: 92%;
+        height: 91%;
+    }
+}
+
+/*Estilos Responsivos para Tablet chica*/
+@media screen and (max-width:1200px) {
+    .section-consultAssets{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:912px), screen and (orientation: portrait) {
+    .section-consultAssets{
+        width: 96%;
+    }
+    .field-ca-be fieldset{
+        width: 200px;
+    }
+    .busqueda-equipos-ca #select-ca-be{
+        width: 170px;
+    }
+    .busqueda-equipos-ca #input-ca{
+        width: 170px;
+    }
+    .field-ca-ea fieldset{
+        width: 400px;
+    }
+    .fieldset-table-ca fieldset{
+        width: 660px;
+    }
+    th{
+        font-size: 15px;
+    }
+    td{
+        font-size: 14.5px;
+    }
+}

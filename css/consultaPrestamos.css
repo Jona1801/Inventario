@@ -1,0 +1,293 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+/*Estilos de consulta de prestamos*/
+
+.contenedor-principal-cp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.section-consultaPres{
+    width: 75%;
+    height: 90%;
+    margin: auto;
+    margin-top: 40px;
+    border-bottom: 1px solid rgb(165, 165, 165);
+    border-top: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-right: 1px solid #b5b0b0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+}
+
+.cabecera-consultaPres{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.cabecera-consultaPres h1{
+    text-decoration: none;
+    user-select: none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #7a7a78;
+}
+
+.botonCerrar-cp{   
+    width: 45px;
+    height: 32px;
+    background-color: rgb(248, 86, 86);
+    border: 1px solid #a7a79b;
+    color: white;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.botonCerrar-cp:hover{
+    background: transparent;
+    color: black;
+}
+
+.consulta-prestamo{
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-consultaPres{
+    margin-right: 20px;
+}
+
+.contenido-consultaPres fieldset{
+    height: 240px;
+    width: 300px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+    
+}
+
+.contenido-consultaPres fieldset legend{
+    font-size: 18px;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.search-consultaPres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cp-search-select{
+    padding: 9.5px 23px;
+    border-radius: 10px;
+    text-align: justify;
+    outline: none;
+    font-size: 16px;
+}
+
+#cp-search-input{
+    padding: 7px 5px;
+    border-radius: 10px;
+    margin: auto;
+    outline: none;
+    border: 1px solid #1a1515;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#cp-search-input::placeholder{
+    text-transform: none;
+}
+
+#cp-btn-search{
+    text-decoration: none;
+    outline: none;
+    padding: 7px 17px;
+    margin-top: 25px;
+    border-radius: 18px;
+    border: none;
+    background: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .3s;
+    
+}
+
+#cp-btn-search:hover{
+    background: rgb(110 187 231 / 58%);
+}
+
+.user-consultaPres{
+    margin-left: 20px;
+}
+
+.user-consultaPres fieldset{
+    border: 2px solid #b5b0b0;
+    height: 240px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.user-consultaPres fieldset legend{
+    font-size: 18px;
+    margin-left: 10px;
+    width: fit-content;
+}
+
+.userDetail-consultaPres{
+    display: flex;
+    justify-content: space-between;
+    height: 180px;
+}
+
+#img-consultaPres{
+    width: 40%;
+    margin-left: 25px;
+}
+
+#img-consultaPres img{
+    width: 85%;
+    height: 98%;
+    border-radius: 10px;    
+}
+
+#cp-labels{
+    display: grid;
+    align-content: space-evenly;
+    text-align: end;
+    font-weight: 600;
+}
+
+#cp-labels label{
+    font-size: 15px;
+    padding: 3px 20px;
+    text-transform: uppercase;
+    margin: 2px;
+    position: relative;
+    bottom: 8px;
+    right: 8px;
+    user-select: none;
+}
+
+.consultaPres-table{
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.cp-table{
+    margin: auto;
+}
+
+.cp-table fieldset{
+    width: 848px;
+    height: 290px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.cp-table fieldset legend{
+    font-size: 18px;
+    margin-left: 10px;
+    width: fit-content;
+}
+
+/*Modificacion de tabla*/
+.cp-table fieldset table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    border-right: 2px solid #f9fafb;
+    border-left: 2px solid #f9fafb;
+    user-select: none;
+}
+
+/*Estilos para el thead y tbody*/
+.cp-table fieldset table thead {
+    display: block;
+}
+
+.cp-table fieldset table tbody{
+    display: block;
+    height: 180px;
+    overflow-y: auto;
+}
+
+/*Clase para th category*/
+.pr-5{
+    padding-right: 55px !important;
+}
+
+.cp-table fieldset table th{
+    width: 14%; 
+    background-color: rgb(110 187 231 / 58%);
+    color: black;
+    padding: 10px 15px;
+}
+
+.cp-table fieldset table td{
+    width: 14%;
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.cp-botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.cp-botones #cp-btn-pdf {
+    padding: 8px 17px;
+    border-radius: 18px;
+    border: none;
+    background-color: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .3s;
+    margin-right: 9px;
+}
+
+
+.cp-botones #cp-btn-pdf:hover{
+    background-color: #dee2e675;
+}
+
+.cp-botones #cp-btn-signature{
+    padding: 7px 17px;
+    border-radius: 18px;
+    border: none;
+    background-color: white;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .3s;
+    margin-left: 9px;
+}
+
+
+.cp-botones #cp-btn-signature:hover{
+    background-color: #dee2e675;
+}
+
+@media screen and (max-width:1368px) {
+    .section-consultaPres{
+        width: 93%;
+        height: 93%;
+    }
+    
+}

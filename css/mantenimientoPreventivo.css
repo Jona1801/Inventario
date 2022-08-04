@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor-principal-mp{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-mp{
+    width: 70%;
+    height: 85%;
+    margin: auto;
+    border-top: 1px solid #b5b0b0;
+    border-bottom: 1px solid #b5b0b0;
+    border-left: 1px solid #b5b0b0;
+    border-right: 1px solid #b5b0b0;
+    border-radius: 12px;
+    box-shadow: 0px 10px 14px 2px #b5b0b0;
+    background-color: #fff;
+}
+
+.cabecera-mp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+.cabecera-mp h1{
+    font-size: 25px;
+    text-decoration: none;
+    user-select: none;
+    color: #7a7a78;
+    font-weight: 500;
+}
+
+#btn-mp-cerrar{
+    padding: 4px 16px;
+    color: #fff;
+    background-color: #f85656;
+    border-radius: 16px;
+    border: 1px solid #b5b0b0;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+#btn-mp-cerrar:hover{
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+}
+
+.content-mp-1{
+    display: flex;
+    justify-content: center;
+}
+
+.content-mp-be{
+    margin-right: 25px;
+}
+.content-mp-be fieldset{
+    width: 290px;
+    height: 280px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-mp-be fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    user-select: none;
+}
+
+.busqueda-filtro-mp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#select-mp-be{
+    width: 200px;
+    padding: 9.5px 14px;
+    outline: none;
+    border-radius: 14px;
+    text-align: justify;
+    font-size: 17px;
+    border: 1px solid #b5b0b0;
+}
+
+
+#input-mp{
+    width: 200px;
+    padding:7px 15px ;
+    margin-top: 28px;
+    border-radius: 16px;
+    outline: none;
+    border: 1px solid #b5b0b0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#input-mp::placeholder{
+    text-transform: none;
+    font-size: 17px;
+}
+
+#btn-mp-search{
+    padding: 7px 17px;
+    border-radius: 18px;
+    margin-top: 25px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 1px 3px 8px 3px #b5b0b0;
+    transition: .4s;
+}
+
+#btn-mp-search:hover{
+    background-color: #6ebbe799;
+}
+
+.content-mp-mod{
+    margin-left: 25px;
+}
+
+.content-mp-mod fieldset{
+    width: 544px;
+    height: 280px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+
+}
+
+.content-mp-mod fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    user-select: none;
+}
+
+.content-lbl-save{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.content-labels-mp{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.content-labels-mp label{
+    padding: 5px 10px;
+    padding-left: 26px;
+    margin: 2px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 600;
+    user-select: none;
+    
+}
+
+.content-save{
+    width: 70%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+
+#textarea-mp-mod{
+    width: 300px;
+    height: 180px;
+    padding: 16px;
+    resize: none;
+    border: 1px solid #b5b0b0;
+    border-radius: 12px;
+    font-size: 17px;
+    outline: none;
+    box-shadow: 0px 2px 13px 3px #b5b0b0;
+}
+
+.btn-mp{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 36px;
+}
+
+#btn-save-mp{
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 16px;
+    border: 1px solid #b5b0b0;
+    outline: none;
+    margin-top: 10px;
+    transition: .4s;
+    text-decoration: none;
+}
+
+#btn-save-mp:hover{
+    background-color: #6ebbe799;
+    border: 1px solid #fff;
+    outline: none;
+
+}
+
+/*Estilos tabla*/
+.content-mp-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.contenet-table fieldset{
+    width: 880px;
+    height: 300px;
+    border: 2px solid #b5b0b0;
+    border-radius: 10px;
+}
+
+.contenet-table fieldset legend{
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 10px;
+    user-select: none;
+}
+
+
+/*Estilos Tabla*/
+
+.tabla-mp-equipos table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla-mp-equipos table thead{
+    position: sticky;
+    top: 0;
+    background-color: #6ebbe759;
+    width: 100%;
+    user-select: none;
+    display: table;
+}
+
+th{
+    width: 10%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+    padding: 7px 0;
+    user-select: none;
+}
+
+
+#tbody-mp{
+    display: block;
+    height: 200px !important;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.tabla-mp-equipos tbody tr{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+
+/*Estilos Responsivos*/
+@media screen and (max-width:1368px){
+    .section-mp{
+        width: 92%;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .section-mp{
+        width: 96%;
+    }
+    .content-mp-be{
+        margin-right: 20px;
+    }
+
+    .content-mp-mod{
+        margin-left: 20px;
+    }
+
+    .content-mp-be fieldset{
+        width: 280px;
+    }
+
+    .content-mp-mod fieldset{
+        width: 540px;
+    }
+
+    .contenet-table fieldset{
+        width: 870px;
+    }
+}
+
+@media screen and (max-width:912px), screen and (orientation:portrait) {
+    .section-mp{
+        width: 98%;
+    }
+
+    .content-mp{
+        margin-top: 40px;
+    }
+
+    .content-mp-be fieldset{
+        width: 230px;
+    }
+
+    #select-mp-be{
+        width: 190px;
+        padding: 9.5px 9px;
+    }
+
+    #input-mp{
+        width: 190px;
+    }
+
+    .content-mp-mod fieldset{
+        width: 430px;
+    }
+
+    .content-mp-be{
+        margin-right: 15px;
+    }
+
+    .content-mp-mod{
+        margin-left: 15px;
+    }
+    
+    .content-labels-mp label{
+        padding-left: 12px;
+    }
+
+    #textarea-mp-mod{
+        width: 274px;
+    }
+
+    .btn-mp{
+        padding-right: 12px;
+    }
+
+    .contenet-table fieldset{
+        width: 690px;
+    }
+}

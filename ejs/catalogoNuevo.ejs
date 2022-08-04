@@ -1,0 +1,354 @@
+<%- contentFor('heros')%>
+
+<title>baja asign</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/catalogoNuevo.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-cn">
+        <div class="section-cn">
+            <div class="cabecera-cn">
+                <h1>Catálogos</h1>
+                <input type="button" value="X" class="botonCerrar-cn">
+            </div>
+
+            <div class="contenedor-cn">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button class="nav-link ml-20" id="btn-cat-cn" onclick="openInfo('catalogo-cn')" data-bs-toggle="tab" type="button" role="tab" >Catálogos</button>
+                      <button class="nav-link" id="btn-relacion-cn" onclick="openInfo('relacion-cn')" data-bs-toggle="tab" type="button" role="tab" title="Categoría, Marca, Modelo" >Relación C.M.M</button>
+                      <button class="nav-link" id="btn-spects-cn" onclick="openInfo('spects-cn')" data-bs-toggle="tab" type="button" role="tab" >Spects</button>
+                      <button class="nav-link" id="btn-plantas-cn" onclick="openInfo('plantas-cn')" data-bs-toggle="tab" type="button" role="tab" >Plantas</button>
+                      <button class="nav-link" id="btn-rel-plantas-cn" onclick="openInfo('rel-plantas-cn')" data-bs-toggle="tab" type="button" role="tab" >Relación Plantas</button>
+                      
+                    </div>
+                </nav>
+
+                <div class="contenedores-tabs">
+                    
+                    <div class="content-tabs" id="catalogo-cn">
+                        <div class="filtro-cn fondo-cat">
+                            <select id="select-catalogos">
+                                <option value="0" selected="selected" hidden>Seleccionar Opción</option>
+                                <option value="1">Ram</option>
+                                <option value="2">OS</option>
+                                <option value="3">Categoría</option>
+                                <option value="4">Marca</option>
+                                <option value="5">Modelo</option>
+                                <option value="6">Procesador</option>
+                                <option value="7">Tarjeta Gráfica</option>
+                                <option value="8">Disco</option>
+                                <option value="9">Vendedor</option>
+                            </select>
+
+                            <!--Contenedor General para Fieldsets-->
+                            <div class="cuadros-cata">
+                                <!--Fieldset Catalogos-->
+                                <fieldset id="field-ram">
+                                    <legend>Ram</legend>
+
+                                    <div class="field-input-ram">
+                                        <input type="text" id="input-ram-1" required="true" onkeypress="return soloNum(event)" placeholder=" Capacidad" value="GB" maxlength="20">
+                                        <input  type="text" id="input-ram-2" onkeyup="mayus(this);" required placeholder=" Versión " maxlength="20" onkeypress="return soloVersion(event)">
+                                        <input  type="text" id="input-ram-3" onkeyup="mayus(this);" required placeholder=" Frecuencia" maxlength="20" onkeypress="return letrasNum(event)">
+                                    </div>
+                                </fieldset>
+
+                                <!--Fieldset OS-->
+                                <fieldset id="field-os">
+                                    <legend>OS</legend>
+                                    
+                                    <div class="field-input-os">
+                                        <input type="text" id="input-os-1" onkeyup="mayus(this);" required placeholder=" Nombre" maxlength="50" onkeypress="return letrasNumGuion(event)">
+                                        <input  type="text" id="input-os-2" onkeyup="mayus(this);" required placeholder=" Versión" onkeypress="return soloVersion(event) ">
+                                        <select disabled id="select-bits" >
+                                            <option value="0" selected="selected" hidden>Arquitectura</option>
+                                            <option value="1">32 bits</option>
+                                            <option value="2">64 bits</option>
+                                            <option value="3">Ninguno</option>
+                                        </select>   
+                                    </div>
+                                </fieldset>
+
+                                <!--Fieldset Categoria-->
+                                <fieldset id="field-category">
+                                    <legend id="legend-cat">Categoría</legend>
+                                    
+                                    <div class="field-input-cat">
+                                        <input type="text" id="input-cbm" onkeyup="mayus(this);" onkeypress="return soloLetras(event)" autocomplete="off" required maxlength="20">
+                                    </div>   
+                                </fieldset>
+
+                                <!--Fieldset Procesador-->
+                                <fieldset id="field-pro">
+                                    <legend>Procesador</legend>
+                                    
+                                    <div class="field-input-pg">
+                                        
+                                        <select name="select-pro-1" id="select-marca-pro">
+                                            <option value="0" selected="selected" hidden >Seleccionar Marca</option>
+                                            <option value="1">Dell</option>
+                                            <option value="2">HP</option>
+                                            <option value="3">BENQ</option>
+                                        </select>
+                                        <select disabled name="select-pro-2" id="select-modelo-pro">
+                                            <option value="0" selected="selected" hidden >Seleccionar Modelo</option>
+                                            <option value="1">Precision 5820</option>
+                                            <option value="2">Pavilon</option>
+                                            <option value="3">582069</option>
+                                        </select>
+                                        <input disabled type="text" id="input-pg-1" onkeyup="mayus(this);" required placeholder=" Versión "  onkeypress="return soloVersion(event)">
+                                        <input disabled type="text" id="input-pg-2" onkeyup="mayus(this);" required placeholder=" Frecuencia" onkeypress="return letrasNum(event)">
+                                    </div>        
+                                </fieldset>
+
+                                <!--Fieldset Tarjeta Grafica-->
+                                <fieldset id="field-gra">
+                                    <legend>Tarjeta Gráfica</legend>
+
+                                    <div class="field-graficas">
+                                        <select name="select-ta-1" id="select-marca-ta">
+                                            <option value="0"  selected="selected" hidden>Seleccionar Marca</option>
+                                            <option value="1">Dell</option>
+                                            <option value="2">BENQ</option>
+                                            <option value="3">HP</option>
+                                        </select>
+                                        <select disabled name="select-ta-2" id="select-modelo-ta">
+                                            <option value="0"  selected="selected" hidden>Seleccionar Modelo</option>
+                                            <option value="1">Precision 5829</option>
+                                            <option value="2">ET-0022</option>
+                                            <option value="3">Pavillon</option>
+                                        </select>
+                                        <input disabled type="text" id="input-gra-1" onkeypress="return soloNumeros(event)" required placeholder="Capacidad">
+                                        <input disabled type="text" id="input-gra-2" onkeyup="mayus(this);" required placeholder="Tipo" onkeypress="return soloLetras(event)">
+                                    </div>
+                                </fieldset>
+
+                                <!--Fieldset Disco-->
+                                <fieldset id="field-hardDrive">
+                                    <legend>Disco</legend>
+                                    
+                                    <div class="field-input-hd">
+                                        <input type="text" id="input-hd-1" onkeypress="return soloNumeros(event)" required placeholder=" Capacidad">
+                                        <input type="text" id="input-hd-2" onkeyup="mayus(this);" required placeholder=" Tipo"  onkeypress="return soloLetras(event)">
+                                    </div>    
+                                </fieldset>
+
+                                <!--Fieldset Vendedor-->
+                                <fieldset id="field-vendor">
+                                    <legend>Vendedor</legend>
+                                    <div class="field-input-vendor">
+                                        <input type="text" id="input-vendor" placeholder="Nombre" onkeyup="mayus(this);" onkeypress="return letrasNum(event)">
+                                    </div>
+                                </fieldset>
+                            </div>   
+                              
+                            <button disabled type="submit" id="btn-cat-save" class="btn-cat" title="Guardar">Guardar</button>
+
+                        </div>
+                    </div>
+
+                    <!--Contenedor para Categoria, Marca, Modelo-->
+                    <div class="content-tabs" id="relacion-cn" style="display: none;">
+                        <div class="cuadros-cata">
+                            <fieldset id="field-cmm">
+                                <legend>Categoría–Marca–Modelo</legend>
+                                
+                                <div class="field-selects">
+                                    <select name="select-cmm-cat" id="select-cmm-1">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Categoría</option>
+                                        <option value="1">Categoría 1</option>
+                                        <option value="2">Categoría 2</option>
+                                        <option value="3">Categoría 3</option>
+                                    </select>
+                                    <select disabled name="select-cmm-mar" id="select-cmm-2">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Marca</option>
+                                        <option value="1">Dell</option>
+                                        <option value="2">HP</option>
+                                        <option value="3">BENQ</option>
+                                        
+                                    </select>
+                                    <select disabled name="select-cmm-mod" id="select-cmm-3">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Modelo</option>
+                                        <option value="1">Precision</option>
+                                        <option value="2">Pavillon</option>
+                                        <option value="3">582032</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="btn-realcion">
+                            <button disabled type="submit" id="btn-relacion-save" title="Guardar">Guardar</button>
+                        </div>
+
+                    </div>
+                    
+                    <!--Contenedor para Spects-->
+                    <div class="content-tabs" id="spects-cn" style="display: none;">
+                        <div class="radios-spects">
+                            <label>
+                                <input id="radio-compu" type="radio" name="pcs" value="computadoras"> Computadoras/Laptop
+                            </label>
+                            <label>
+                                <input id="radio-terminal" type="radio" name="pcs" value="terminales"> Terminal
+                            </label>
+                    
+                        </div>
+                        <fieldset>
+                            <legend>Spects</legend>
+
+                            <div class="content-selects-spects">
+
+                                <select disabled name="select-spects-bra" id="select-brand-cn">
+                                    <option value="0" selected="selected" hidden>Seleccionar Marca</option>
+                                    <option value="1">Dell</option>
+                                    <option value="2">HP</option>
+                                </select>
+
+                                <select disabled name="select-spects-mod" id="select-model-cn">
+                                    <option value="0" selected="selected" hidden >Seleccionar Modelo</option>
+                                    <option value="1">123456</option>
+                                    <option value="2">654321</option>
+                                </select>
+
+                                <select disabled name="select-spects-gp" id="select-gp-cn" class="w-spect">
+                                    <option value="0" selected="selected" hidden>Seleccionar Tarjeta Gráfica</option>
+                                    <option value="1">2 GB</option>
+                                    <option value="2">4 GB</option>
+                                </select>
+                                
+                                <select disabled name="select-spects-ram" id="select-ram-cn">
+                                    <option value="0" selected="selected" hidden>Seleccionar Ram</option>
+                                    <option value="1">2 GB DEDICATED QUEADRO P520 NVIDIA</option>
+                                    <option value="2">8 GB DDR</option>
+                                </select>
+
+    
+                                <select disabled name="select-spects-os" id="select-os-cn">
+                                    <option value="0" selected="selected" hidden>Seleccionar OS</option>
+                                    <option value="1">Windows XP</option>
+                                    <option value="2">Windows 7</option>
+                                </select>
+
+                                <select disabled name="select-spects-cpu" id="select-cpu-cn" class="w-spect">
+                                    <option value="0" selected="selected" hidden>Seleccionar Procesador</option>
+                                    <option value="1">6100</option>
+                                    <option value="2">9700</option>
+                                </select>
+
+                                <select disabled name="select-spects-hdd" id="select-hdd-cn">
+                                    <option value="0" selected="selected" hidden>Seleccionar Disco</option>
+                                    <option value="1">256 GB</option>
+                                    <option value="2">512 GB</option>
+                                </select>
+                                
+                                <button disabled id="btn-spects-save" class="btn-spects" title="Guardar"><img src="img/icons/box-arrow-up.svg" width="25px"></button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!--Contenedor para Plantas-->
+                    <div class="content-tabs" id="plantas-cn" style="display: none;">
+                        <div class="radios-plantas">
+                            <label>
+                                <input type="radio" name="plantas" id="radio-locacion"> Locación
+                            </label>
+                            <label>
+                                <input type="radio" name="plantas" id="radio-planta"> Plantas
+                            </label>
+                            <label>
+                                <input type="radio" name="plantas" id="radio-edificio"> Edificios
+                            </label>
+                            <label>
+                                <input type="radio" name="plantas" id="radio-area"> Áreas
+                            </label>
+                        </div>
+
+                        <div class="content-fields-plantas">
+                            <fieldset id="field-locacion">
+                                <legend>Locación</legend>
+                                    <div class="field-input-locacion">
+                                        <input type="text" id="input-locacion" onkeyup="mayus(this)" placeholder="Locación" onkeypress="return letrasNum(event)">
+                                    </div>
+                            </fieldset >
+
+                            <fieldset id="field-planta">
+                                <legend>Plantas</legend>
+                                    <div class="field-input-planta">
+                                        <input type="text" id="input-planta" onkeyup="mayus(this)" placeholder="Planta" onkeypress="return letrasNum(event)">
+                                    </div>
+                            </fieldset >
+    
+                            <fieldset id="field-edificio">
+                                <legend>Edificios</legend>                          
+                                <div class="field-input-planta">
+                                    <input type="text" id="input-edificio" onkeyup="mayus(this)" placeholder="Edificio" onkeypress="return letrasNum(event)">
+                                </div>                         
+                            </fieldset >
+    
+                            <fieldset id="field-area" >
+                                <legend>Áreas</legend>
+                                <div class="field-input-area">
+                                    <input type="text" id="input-area" onkeyup="mayus(this)" placeholder="Área" onkeypress="return letrasNum(event)">
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="guardar-plantas"><button disabled id="btn-guardar-plantas" title="Guardar">Guardar</button></div>
+                    </div>
+                    <!--Contenedor para Relacion Plantas-->
+                    <div class="content-tabs" id="rel-plantas-cn" style="display:none;">
+                        <div class="content-field-rel-plant">
+                            <fieldset id="field-rel-plant">
+                                <legend>Locación–Planta–Edificio</legend>
+                                
+                                <div class="field-selects-rp">
+                                    <select name="select-rp-loc" id="select-rp-1">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Seleccionar Locación</option>
+                                        <option value="1">Locación 1</option>
+                                        <option value="2">Locación 2</option>
+                                        <option value="3">Locación 3</option>
+                                    </select>
+                                    <select disabled name="select-rp-pla" id="select-rp-2">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Seleccionar Planta</option>
+                                        <option value="1">Planta 1</option>
+                                        <option value="2">Planta 2</option>
+                                        <option value="3">Planta 3</option>
+                                        
+                                    </select>
+                                    <select disabled name="select-rp-edi" id="select-rp-3">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Seleccionar Edificio</option>
+                                        <option value="1">Edificio 1</option>
+                                        <option value="2">Edificio 2</option>
+                                        <option value="3">Edificio 3</option>
+                                    </select>
+                                    <select disabled name="select-rp-are" id="select-rp-4">
+                                        <option value="0" disabled="disabled" selected="selected" hidden>Seleccionar Área</option>
+                                        <option value="1">BUILDING MAINTENANCE</option>
+                                        <option value="2">NETWORK AND SYSTEMS</option>
+                                        <option value="3">SHIPPING AND RECEIVING</option>
+                                        <option value="4">ENVEIRONMENTAL LAB.</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="btn-relacion-plantas">
+                            <button disabled type="submit" id="btn-rel-plant-save">Guardar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/catalogoNuevo.js"></script>
+</section>

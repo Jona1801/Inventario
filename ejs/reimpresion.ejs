@@ -1,0 +1,51 @@
+<%- contentFor('heros')%>
+
+<title>baja asign</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/reimpresion.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+<section>
+    <div class="contenedor-principal-ie">
+        <div class="section-ie">
+            <div class="cabecera-ie">
+                <h1>Imprimir Etiquetas</h1>
+                <input type="button" class="botonCerrar-ie" value="X" onclick="window.close()">
+            </div>
+
+            <div class="section-imprimir">
+                <div class="field-ie-search">
+                    <fieldset>
+                        <legend>Search</legend>
+    
+                        <div class="input-btn-ie">
+                            <div class="cont-input-ie" >
+                                <input id="input-ie" type="text" placeholder="Escribir Label" onkeypress="return soloNumeros(event)">
+                                <button disabled id="btn-search-ie" title="Buscar" class="ml-25"><img src="img/icons/search.svg" width="25px"></button>
+                            </div>
+                            <div class="cont-info-ie" >
+                                
+                                <div class="labels-ie">
+                                    <label id="marca-ie">Marca</label>
+                                    <label id="modelo-ie">Modelo</label>
+                                    <label id="nserie-ie">Num. Serie</label>
+                                </div>
+
+                                <div class="btn-ie">
+                                    <button disabled id="btn-imprimir" title="Imprimir"><img src="img/icons/printer.svg" width="25px"></button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/reimpresion.js"></script>
+</section>

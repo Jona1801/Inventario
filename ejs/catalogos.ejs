@@ -1,0 +1,141 @@
+<%- contentFor('heros')%>
+<title>Catalogos</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/catalogos.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-catalogos">
+        <div class="section-catalogos">
+            <div class="cabecera-catalogos">
+                <h3>Catalogos</h3>
+                <input type="button" class="botonCerrar-cat" value="X" onclick="window.close()">
+            </div>
+
+            <div class="catalogos">
+                <div class="filtro-catalogos fondo-cat">
+                        <select  id="select-catalogos">
+                            <option value="" selected="selected" hidden>Select Option</option>
+                            <option value="1">Ram</option>
+                            <option value="2">OS</option>
+                            <option value="3">Categoria</option>
+                            <option value="4">Marca</option>
+                            <option value="5">Modelo</option>
+                            <option value="6">Procesador</option>
+                            <option value="7">Tarjeta Grafica</option>
+                            <option value="8">Disco</option>
+                            <option value="9">Categoria-Marca-Modelo</option>
+                        </select>
+
+                        <div class="cuadros-cata ">
+                            <fieldset id="field-ram">
+                                <legend>Ram</legend>
+                                
+                                <div class="field-input-ram">
+                                    <input type="text" id="input-ram-1" required="true" placeholder=" Capacidad" value="GB" maxlength="20">
+                                    <input  type="text" id="input-ram-2" required placeholder=" Version " maxlength="20">
+                                    <input  type="text" id="input-ram-3" required placeholder=" Frecuencia" maxlength="20">
+                                </div>   
+                            </fieldset>
+
+                            <fieldset id="field-os">
+                                <legend>OS</legend>
+                                
+                                <div class="field-input-os">
+                                    <input type="text" id="input-os-1" required placeholder=" Nombre" maxlength="50">
+                                    <input type="text" id="input-os-2" required placeholder=" Version" maxlength="20">
+                                    <select disabled id="select-bits" >
+                                        <option value="0" selected="selected" hidden>Arquitectura</option>
+                                        <option value="1">32 bits</option>
+                                        <option value="2">64 bits</option>
+                                        <option value="3">Ninguno</option>
+                                    </select>   
+                                </div>
+                            </fieldset>
+
+                            <fieldset id="field-category">
+                                <legend id="legend-cat">Categoria</legend>
+                                
+                                <div class="field-input-cat">
+                                    <input type="text" id="input-cbm" onkeyup="mayus(this);" autocomplete="off" required maxlength="20">
+                                </div>   
+                            </fieldset>
+                
+                            <fieldset id="field-pro">
+                                <legend>Procesador</legend>
+                                
+                                <div class="field-input-pg">
+                                    
+                                    <select name="select-pro-1" id="select-marca-pro">
+                                        <option value="" selected="selected" hidden >Select Marca</option>
+                                        <option value="0">Dell</option>
+                                    </select>
+                                    <select disabled name="select-pro-2" id="select-modelo-pro">
+                                        <option value="" selected="selected" hidden >Select Modelo</option>
+                                        <option value="0">Precision 5820</option>
+                                    </select>
+                                    <input disabled type="text" id="input-pg-1" required placeholder=" Version ">
+                                    <input disabled type="text" id="input-pg-2" required placeholder=" Frecuencia ">
+                                </div>        
+                            </fieldset>
+
+                            <fieldset id="field-gra">
+                                <legend>Tarjeta Grafica</legend>
+
+                                <div class="field-graficas">
+                                    <select name="select-ta-1" id="select-marca-ta">
+                                        <option value=""  selected="selected" hidden>Select Marca</option>
+                                        <option value="0">BENQ</option>
+                                    </select>
+                                    <select disabled name="select-ta-2" id="select-modelo-ta">
+                                        <option value=""  selected="selected" hidden>Select Modelo</option>
+                                        <option value="0">ET-0022</option>
+                                    </select>
+                                    <input disabled type="text" id="input-gra-1" required placeholder="Capacidad">
+                                    <input disabled type="text" id="input-gra-2" required placeholder="Tipo">
+                                </div>
+                            </fieldset>
+
+                            <fieldset id="field-hardDrive">
+                                <legend>Disco</legend>
+                                
+                                <div class="field-input-hd">
+                                    <input type="text" id="input-hd-1" required placeholder=" Capacidad">
+                                    <input type="text" id="input-hd-2" required placeholder=" Tipo">
+                                </div>    
+                            </fieldset>
+
+                            <fieldset id="field-cmm">
+                                <legend>Categoria–Marca–Modelo</legend>
+                                
+                                <div class="field-selects">
+                                    <select name="select-cmm-cat" id="select-cmm-1">
+                                        <option value="" disabled="disabled" selected="selected" hidden>Categoria</option>
+                                        <option value="">Categoria 1</option>
+                                    </select>
+                                    <select disabled name="select-cmm-mar" id="select-cmm-2">
+                                        <option value="" disabled="disabled" selected="selected" hidden>Marca</option>
+                                        <option value="">Dell</option>
+                                        
+                                    </select>
+                                    <select disabled name="select-cmm-mod" id="select-cmm-3">
+                                        <option value="" disabled="disabled" selected="selected" hidden>Modelo</option>
+                                        <option value="">Precision</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+                        <button disabled type="submit" id="btn-cat-save" class="btn-cat" title="Guardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/catalogos.js"></script>
+    
+</section>

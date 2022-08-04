@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="datetimepicker-master/jquery.datetimepicker.css"/>
+    <script src="datetimepicker-master/jquery.js"></script>
+    
+    <title>calend</title>
+    
+</head>
+<body>
+
+    <br>
+    <label for="">Calendario</label>
+    <input type="text" id="calendario" placeholder="mm/dd/yyyy --:-- --"><img src="img/icons/calendar-week.svg" alt="">
+
+    <script src="datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+
+    <script>
+        $('document').ready(function(){
+        $('#calendario').datetimepicker({
+            dateFormat: 'yy-mm-dd',
+            showButtonPanel: true,      
+            showMonthAfterYear: true,
+            showWeek: true,
+            showAnim: "drop",
+            constrainInput: true,
+            minDate: new Date((new Date().getFullYear()), new Date().getMonth(), new Date().getDate()), //10 dias despues es la fecha minima
+            maxDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 100), //100 dias despues es la fecha minima
+            defaultDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()), //la fecha por defecto, la fecha mínima
+
+        });
+        });
+  </script>
+
+</body>
+</html>

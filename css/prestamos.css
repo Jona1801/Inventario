@@ -1,12 +1,8 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 
 *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-}
-body{
-    overflow: hidden;
 }
 
 .contenedor-principal-prestamos{
@@ -18,10 +14,9 @@ body{
     
 }
 .section-prestamos{
-    width: 90%;
-    height: 90%;
+    width: 92%;
+    height: 92%;
     margin: auto;
-    margin-top: 20px;
     border-bottom: 1px solid rgb(165, 165, 165);
     border-top: 1px solid #b5b0b0;
     border-left: 1px solid #b5b0b0;
@@ -34,8 +29,9 @@ body{
 .cabecera-pres{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 8px;
 }
 
 .cabecera-pres h1{
@@ -46,22 +42,20 @@ body{
     color: #7a7a78;
 }
 
-.botonCerrar{   
-    width: 45px;height: 32px;
-    background-color: rgb(248, 86, 86);
-    border: 1px solid #a7a79b;
+.botonCerrar-pn{   
+    padding: 4px 16px !important;
+    background-color: #f85656;
+    border: 1px solid #b5b0b0;
     color: white;
-    border-radius: 16px;
+    border-radius: 16px !important;
     transition: .4s;
-    font-weight: 600;
     cursor: pointer;
+    font-weight: 600;
 }
 
-.botonCerrar:hover{
+.botonCerrar-pn:hover{
     background-color: transparent;
     color: black;
-    font-weight: bold;
-    
 }
 
 .container-prestamos{
@@ -83,7 +77,6 @@ body{
     width: 58%;
     background: white;
     height: 95%;
-    margin-top: 40px;
 }
 
 .fieldset1-gpn{
@@ -100,41 +93,44 @@ body{
 .fieldset1-gpn fieldset legend{
     font-size: 18px;
     margin-left: 10px;
+    width: fit-content;
+    user-select: none;
 }
 
 .select-search-gpn{
     display: flex;
     justify-content: space-around;
-    margin-top: 15px;
+    align-items: center;
+
 }
 
 .select-gpn select{
-    padding: 8px 12px;
-    border-radius: 10px;
+    padding: 9px 15px;
+    border-radius: 16px;
     border: 1px solid rgb(36 31 31 / 75%);
     text-align: justify;
     outline: none;
-    font-size: 16px;
+    font-size: 16px !important;
+    margin: 0;
 }
 
 .search-gpn{
+    display: flex;
+    align-items: center;
     margin-right: 10px;
 }
 .search-gpn input{
-    width: 160px;
+    width: 170px;
     outline: none;
-    border-radius: 10px;
+    border-radius: 16px;
     color: #1a1515;
     background: transparent;
     border: 1px solid rgb(36 31 31 / 85%);
-    padding: 8px;
+    padding: 7px;
     font-size: 16px;
     text-transform: uppercase;
 }
-#inputnum-gpn::placeholder{
-    text-transform: none;
-}
-#inputtext-gpn::placeholder{
+#input-gpn::placeholder{
     text-transform: none;
 }
 
@@ -142,13 +138,12 @@ body{
     background-color: transparent;
     color: #1a1515;
     border: 1px solid rgb(36 31 31 / 75%);
-    border-radius: 11px;
+    border-radius: 16px;
     padding: 4px 8px;
     text-decoration: none;
     transition: .4s;
     margin-left: .5rem;
     font-size: 15px;
-    cursor: pointer;
 }
 
 .search-gpn button:hover{
@@ -159,34 +154,37 @@ body{
 .fieldset2-gpn{
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .fieldset2-gpn fieldset{
     width: 550px;
-    height: 560px;
+    height: 555px;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
-    overflow-y: overlay;
-    overflow-x: hidden
 }
 
 .fieldset2-gpn fieldset legend{
     font-size: 24px;
     margin-left: 10px;
+    width: fit-content;
+    user-select: none;
 }
+
+/*MODIFICACION DE CONTENEDOR PARA IMAGEN Y LABELS DE INFORMACION DE USUARIO DE PRESTAMOS 02/08/2022*/
 
 .info-gpn{
     display: flex;
     justify-content: space-around;
+    width: 100%;
     height: 198px;
 }
 
 .info-gpn .img-gpn{
-    width: 26%;
+    width: 28%;
     height: 86%;
-    margin-top: 30px;
-    margin-left: 35px;
+    margin-top: 20px;
+    margin-left: 40px;
 }
 
 .info-gpn .img-gpn img{
@@ -196,35 +194,41 @@ body{
 }
 
 .labels-gpn{
-    width: 50%;
+    width: 60%;
     display: grid;
     align-content: space-evenly;
-    text-align: center;
+    text-align: end;
     font-weight: 600;
-    margin-top: 10px;
+    padding-right: 16px;
 }
 
 .labels-gpn label{
     text-transform: uppercase;
-    font-size: 16px;
-    padding: 5px 20px;
+    font-size: 15px;
+    padding: 5px;
     user-select: none;
     position: relative;
     top: 7px;
-    left: 15px;
+    font-weight: 600;
 }
 
+/*ACA TERMINA LA MODIFICACION 02/08/2022*/
+
+
 .gpn-table{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .gpn-table label{
     font-size: 12px;
     margin-left: 7px;
+    font-weight: 400;
+    text-align: start !important;
 }
 
+/*Modificaciones de Tabla Historial Prestamo*/
 .gpn-table table{
-    width: 98%;
+    width: 100%;
     border-collapse: collapse;
     user-select: none;
     margin: auto;
@@ -233,51 +237,91 @@ body{
 }
 
 .gpn-table table th{
+    width: 14%;
     background-color: rgb(110 187 231 / 58%);
     color: black;
     font-size: 14px;
-    padding: 6px 15px;
+    padding: 8px 15px;
+}
+.gpn-table table thead {
+    display: block;
 }
 
+.pr-10{
+    padding-right: 10px !important;
+}
+.pr-20{
+    padding-right: 20px !important;
+}
+
+#table-gpn-iu{
+    display: block;
+    overflow-y: auto;
+    height: 200px;
+}
+
+/*Estilos para el scrollbar*/
+#table-gpn-iu::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+#table-gpn-iu::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #999;
+    border: 1px solid #b5b0b0;
+}
+
+#table-gpn-iu::-webkit-scrollbar-thumb:hover{
+    background-color: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
 .gpn-table table td {
-    padding-left: 40px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 20%;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .fieldset3-gpn{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 .fieldset3-gpn fieldset{
     width: 850px;
     height: 428px;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
-    overflow-y: overlay;
-    overflow-x: hidden;
 }
 
 .fieldset3-gpn fieldset legend{
     font-size: 18px;
     margin-left: 10px;
+    width: fit-content;
+    user-select: none;
 }
 
 .search-gpn-be {
+    display: flex;
+    align-items: center;
+    width: 55%;
     position: relative;
-    top: 30px;
-    left: 35px;
+    top: 10px;
+    left: 16px;
 }
 
 .search-gpn-be input{
     outline: none;
-    border-radius: 10px;
+    border-radius: 14px;
     color: #1a1515;
     background: transparent;
     border: 1px solid rgb(36 31 31 / 85%);
-    padding: 8px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 16px !important;
 }
 
 .search-gpn-be button{
@@ -285,12 +329,11 @@ body{
     background: transparent;
     border: 1px solid rgb(36 31 31 / 75%);
     color: #231d1de6;
-    border-radius: 10px;
+    border-radius: 14px;
     text-decoration: none;
     transition: .4s;
     margin-left: 10px;
     font-size: 15px;
-    cursor: pointer;
 }
 
 .search-gpn-be button:hover{
@@ -299,16 +342,18 @@ body{
     
 }
 .table-gpn-be{
-    margin-top: 68px;
+    margin-top: 55px;
 }
 .table-gpn-be label{
     font-size: 12px;
     font-weight: 400;
     margin-left: 10px;
+    text-align: start !important;
 }
 
+/*Modificacion de tabla Buscar Equipo*/
 .table-gpn-be table{
-    width: 98%;
+    width: 100%;
     border-collapse: collapse;
     margin: auto;
     border-right: 2px solid #f9fafb;
@@ -316,19 +361,63 @@ body{
     user-select: none;
 }
 
+.table-gpn-be table thead{
+    display: block;
+}
+
+.table-gpn-be table tbody{
+    display: block;
+    height: 210px;
+    overflow-y: auto;
+}
+
 .table-gpn-be table th{
+    width: 14%;
     background-color: rgb(110 187 231 / 58%);
     color: black;
-    font-size: 14px;
-    padding: 9px 12px;
+    font-size: 15px;
+    padding: 9px 15px;
+    text-align: center;
+}
+
+/*Clases para thead*/
+
+.pr-32{
+    padding-right: 32px !important;
 }
 
 .table-gpn-be table td{
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 14%;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
 }
+
+
+/*estilos para el scrollbar*/
+
+#table-gpn-be::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+#table-gpn-be::-webkit-scrollbar-thumb{
+    border: 1px solid #b5b0b0;
+    border-radius: 20px;
+    background-color: #999;
+}
+
+#table-gpn-be::-webkit-scrollbar-thumb:hover{
+    background-color: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#table-gpn-be::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
 
 .btn-quitar{
     text-decoration: none;
@@ -351,7 +440,6 @@ body{
     width: 100%;
     margin-top: 40px;
     display: flex;
-    justify-content: center;
 }
 
 .table-accesorios{
@@ -362,7 +450,8 @@ body{
 }
 
 .table-accesorios fieldset{
-    width: 85%;
+    border: 2px solid #b5b0b0;
+    width: 94%;
     height: 200px;
     border-radius: 10px;
     overflow-y: auto;
@@ -372,6 +461,8 @@ body{
 .table-accesorios fieldset legend{
     font-size: 18px;
     margin-left: 10px;
+    width: fit-content;
+    user-select: none;
 }
 
 .table-accesorios table{
@@ -381,7 +472,6 @@ body{
     border-right: 2px solid #f9fafb;
     border-left: 2px solid #f9fafb;
     user-select: none;
-    margin-top: 10px;
 }
 
 .table-accesorios table th{
@@ -390,14 +480,11 @@ body{
     padding: 6px 15px;
     text-align: justify;
     font-size: 13px;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 .table-accesorios table td{
-    padding-left: 27px;
-    padding-right: 20px;
-    padding-top: 12px;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     text-align: justify;
 }
 
@@ -440,15 +527,16 @@ body{
     background-color: transparent;
     color: #1a1515;
     border-radius: 16px;
-    padding: 4px 8px;
+    padding: 2px 12px;
     text-decoration: none;
     transition: .4s;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .btn-acces:hover{
     background-color: rgb(110 187 231 / 75%);
-    border: 1px solid white;
+    border: 1px solid #b5b0b0;
 }
 
 .ml-btn{
@@ -459,25 +547,26 @@ body{
     width: 99%;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
-    height: 160px;
+    height: 180px;
 }
 
 .periodos fieldset legend{
     font-size: 18px;
     margin-left: 10px;
+    width: fit-content;
+    user-select: none;
 }
 
 .fechas-prestamos{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 17px;
 }
 
 .fechas-prestamos input{
     padding: 8px 15px;
-    border-radius: 10px;
-    border: 1px solid rgb(36 31 31 / 75%);
+    border-radius: 16px !important;
+    border: 1px solid #b5b0b0;
     margin: auto;
     outline: none;
 }
@@ -500,13 +589,12 @@ body{
     text-decoration: none;
     outline: none;
     padding: 7px 12px;
-    border-radius: 12px;
+    border-radius: 14px;
     color: black;
     background-color: transparent;
     box-shadow: 1px 3px 8px 3px #b5b0b0;
     border: none;
     transition: .4s;
-    cursor: pointer;
     font-size: 16px;
     margin-left: 18px;
 }
@@ -517,25 +605,304 @@ body{
     border: none;
 }
 
-/*Estilos Tablet*/
+/*Estilos Responsivos*/
+
+@media screen and (max-width:1600px){
+    .section-prestamos{
+        width: 96%;
+    }
+
+    .select-gpn select{
+        width: 170px;
+        padding: 9px 4px;
+    }
+}
 
 @media screen and (max-width:1385px) {
     .search-gpn{
         display: flex;
         margin-right: 0;
+        align-items: center;
     }
 
     .search-gpn button{
-        margin-top: 5px;
-        height: 27px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
+    
+    .cabecera-pres{
+        margin-bottom: 8px;
+    }
+    .container-prestamos{
+        margin-top: 8px;
+    }
+}
+
+/*Estilos Surface Pro 7*/
+
+@media screen and (max-width:1368px) {
+    .section-prestamos{
+        width: 95%;
+        height: 97%;
+    }
+
+    .container-prestamos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .cabecera-pres{
+        margin-bottom: 0;
+    }
+
+    .section1-pres {
+        height: 98%;
+        width: 39%;
     }
 
     .select-gpn select {
-        padding: 8px 8px !important;
+        padding: 9px 0 !important;
     }
 
-    .search-gpn input{
-        width: 150px;
+    .search-gpn input {
+        width: 132px;
+        padding: 6px;
+    }
+
+    .fieldset2-gpn{
+        margin-top: 20px;
+    }
+
+    .fieldset2-gpn fieldset{
+        height: 540px;
+    }
+    .fieldset2-gpn fieldset legend{
+        font-size: 20px;
+    }
+
+    .info-gpn .img-gpn{
+        width: 29%;
+        margin-left: 25px;
+    }
+
+    .labels-gpn label{
+        font-size: 15px;
+    }
+    .section2-pres {
+        width: 59%;
+        height: 98%;
+    }
+
+    .search-gpn-be{
+        top: 4px;
+        left: 11px;
+    }
+
+    .gpn-table{
+        margin-top: 20px;
     }
     
+    .gpn-table table td{
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        font-size: 15px;
+    }
+
+    .table-gpn-be{
+        margin-top: 30px;
+    }
+
+    .table-gpn-be table tbody{
+        height: 196px;
+    }
+
+    .table-gpn-be table td{
+        padding: 9px 8px;
+        font-size: 15px;
+    }
+
+    .table-gpn-be table th{
+        padding: 9px 8px;
+        font-size: 15px;
+    }
+
+    .pr-20 {
+        padding-right: 0;
+    }
+
+    .pr-32{
+        padding-right: 17px !important;
+    }
+
+    .fieldset3-gpn fieldset{
+        height: 390px;
+    }
+
+    .search-gpn-be button{
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
+    .acces-fechas-gpn{
+        margin-top: 24px;
+    }
+
+    .table-accesorios fieldset{
+        width: 315px;
+        height: 230px;
+    }
+
+    .periodos{
+        align-items: flex-start;
+    }
+
+    .periodos fieldset{
+        width: 240px;
+        height: 170px;
+    }
+
+    .fechas-prestamos input{
+        padding: 5px 10px;
+    }
+
+    .agregar-prestamo{
+        position: relative;
+        top: 90px;
+        right: 195px;
+    }
+
+    .btn-quitar{
+        display: flex;
+        align-items: center;
+        height: 27px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+    .section-prestamos{
+        width: 95%;
+        height: 97%;
+    }
+    .cabecera-pres{
+        margin-bottom: 0;
+    }
+
+    .fieldset1-gpn fieldset{
+        width: 300px;
+        height: 190px;
+    }
+
+    .select-search-gpn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .select-gpn select{
+        width: 200px;
+        padding: 8px 15px !important;
+        margin-bottom: 2px;
+    }
+
+    .search-gpn{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-gpn input{width: 200px;}
+
+    .search-gpn input{
+        margin-top: 12px;
+    }
+
+    .search-gpn button{
+        margin-top: 12px;
+    }
+
+    .gpn-table table th{
+        padding: 7px 14.5px;
+    }
+
+    .gpn-table table td{
+        padding-left: 8px;
+        padding-right: 4px;
+    }
+
+    .table-accesorios fieldset{
+        width: 275px;
+    }
+    .inp-add-acc{
+        width: 200px;
+    }
+    .table-gpn-be table th{
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .periodos fieldset{
+        width: 200px;
+        height: 174px;
+    }
+
+    .fechas-prestamos input{
+        width: 172px;
+        font-size: 14px;
+    }
+
+    .agregar-prestamo{
+        right: 180px;
+        top: 92px;
+    }
+    
+}
+
+@media screen and (max-width:912px), screen and (orientation:portrait) {
+    .section-prestamos{
+        width: 97%;
+    }
+
+    .gpn-table table th{
+        padding: 7px 1px;
+    }
+
+    .pr-10{
+        padding-right: 0 !important;
+    }
+    
+    .table-gpn-be table th{
+        padding: 8px 1px;
+        font-size: 15px;
+    }
+
+    .pr-20{
+        padding-right: 0 !important;
+    }
+
+    .pr-32{
+        padding-right: 0 !important;
+    }
+
+    .fieldset3-gpn fieldset{
+        height: 384px;
+    }
+
+    .acces-fechas-gpn{
+        margin-top: 18px;
+    }
+
+    .table-accesorios fieldset{
+        height: 175px;
+    }
+
+    .table-accesorios fieldset legend{
+        margin-bottom: 8px;
+    }
 }

@@ -1,0 +1,104 @@
+
+<%- contentFor('heros')%>
+
+<title>baja asign</title>
+<link rel="icon" href="img/shortcut-icon.ico">
+<link rel="stylesheet" href="css/bajaAsign.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+<section>
+    <div class="contenedor-principal-ba">
+        <div class="section-asign">
+            <div class="cabecera-asign">
+                <h1>Baja Asignaciones</h1>
+                <input type="button" class="botonCerrar-ba" value="X" onclick="window.close()">
+            </div>
+
+            <div class="baja-asign">
+                <div class="user-fieldset ">
+                    <fieldset >
+                        <!-- Legend tag using -->
+                        <legend>User Search</legend>
+
+                        <div class="ba-user-search">
+                            <select id="ba-user-select">
+                                <option value="" selected="selected" hidden>Select Option</option>
+                                <option value="0">Numero Empleado</option>
+                                <option value="1">Nombre Empleado</option>
+                            </select>
+                            <input disabled id="ba-user-input" type="text" autocomplete="off" placeholder="">
+                            <button disabled id="ba-user-search" class="btn-snunoe" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="user-details-ba">
+                    <fieldset>
+                        <!-- Legend tag using -->
+                        <legend>User Details</legend>
+                        
+                        <div class="info-ba">
+                            <div class="info-ba-img">
+                                <img id="ba-ud-img" src=".jpg" ></i>
+                            </div>
+                            <div class="ba-labels">
+                                <label id="ba-nombre">Nombre </label>
+                                <label class="mt-label" id="ba-area">Area</label>
+                                <label class="mt-label" id="ba-cargo">Cargo</label>
+                                <label class="mt-label" id="ba-turno">Turno</label>
+                            </div> 
+                        </div>     
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="baja-asign-table">
+                <div class="ba-assigned">
+                    <fieldset>
+                        <legend>Assigned</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Label</th>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>Serial</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="ba-assign-table">
+                                <!--
+                                <tr>
+                                    <td>100125</td>
+                                    <td>DELL</td>
+                                    <td>990118</td>
+                                    <td>025310</td>
+                                    <td>Laptop DELL</td>
+                                    <td>Notebook</td>
+                                    <td><input disabled id="checkbox-ba-assigned" class="ic-tba" type="checkbox" ></td>
+                                </tr>
+                                -->
+                              
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="ba-area-tb">
+                <div class="ba-text-area" >
+                    <textarea disabled id="textarea-ba-notes" class="ta-ba"  cols="30" rows="10" required placeholder="Enter Notes"></textarea>
+                </div>
+                <div class="btn-ba-guardar" >
+                    <button disabled type="submit" id="ba-btn-save" title="Guardar" ><img src="img/icons/box-arrow-up.svg" width="25px" height="26px" ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bajaAsign.js"></script>
+</section>

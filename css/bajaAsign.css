@@ -21,10 +21,9 @@ body{
 }
 
 .section-asign {
-    width: 90%;
-    height: 90%;
+    width: 75%;
+    height: 93%;
     margin: auto;
-    margin-top: 20px;
     border-bottom: 1px solid rgb(165, 165, 165);
     border-top: 1px solid #b5b0b0;
     border-left: 1px solid #b5b0b0;
@@ -48,18 +47,18 @@ body{
     color: #7a7a78;
 }
 
-.botonCerrar{   
+.botonCerrar-ba{   
     width: 45px;height: 32px;
     background-color: rgb(248, 86, 86);
     border: 1px solid #a7a79b;
     color: white;
     font-weight: 600;
-    border-radius: 20px !important;
+    border-radius: 16px;
     transition: .4s;
     text-align: center;
 }
 
-.botonCerrar:hover{
+.botonCerrar-ba:hover{
     background-color: transparent;
     color: black;
     font-weight: bold;
@@ -71,21 +70,20 @@ body{
 }
 
 .user-fieldset{
-    margin-right: 15px;
+    margin-right: 22px;
 }
 
 
 .user-fieldset fieldset{
     border: 2px solid #b5b0b0  !important;
     border-radius: 10px;
-    width: 400px;
+    width: 305px;
     height: 240px;
 }
 
 .user-fieldset legend{
     font-size: 18px !important;
-    float: none !important;
-    width: 25.5% !important;
+    width: fit-content;
     margin-left: 10px !important;
 }
 
@@ -93,11 +91,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 18px;
 }
 
 .user-fieldset fieldset select{
-    padding: 8px 23px;
+    padding: 9px 24px;
     border-radius: 10px;
     text-align: justify;
     font-size: 16px;
@@ -106,7 +103,7 @@ body{
 
 .user-fieldset fieldset input{
     text-align: center;
-    padding: 8px 3px;
+    padding: 7px 3px;
     font-size: 16px;
     border-radius: 10px;
     margin: auto;
@@ -119,11 +116,11 @@ body{
     text-align: center;
 }
 
-#inputtext-ba-us{
+#ba-user-input{
     text-transform: uppercase;
 }
 
-#inputtext-ba-us::placeholder{
+#ba-user-input::placeholder{
     text-transform: none;
 }
 
@@ -146,7 +143,6 @@ body{
     background: white;
     box-shadow: 1px 3px 8px 3px #b5b0b0;
     transition: .4s;
-    cursor: pointer;
 }
 .btn-snunoe:hover{
     outline: none;
@@ -167,11 +163,11 @@ body{
 }
 
 .user-details-ba{
-    margin-left: 15px;
+    margin-left: 22px;
 }
 
 .user-details-ba fieldset{
-    width: 600px;
+    width: 495px;
     height: 240px;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
@@ -179,43 +175,42 @@ body{
 
 .user-details-ba legend{
     font-size: 18px;
-    float: none;
-    width: 16.5%;
+    width: fit-content;
     margin-left: 10px;
 }
 
 .info-ba{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
     height: 180px;
 }
 
 .info-ba-img{
-    width: 24%;
-    margin-top: 5px;
-    margin-right: 30px;
+    width: 40%;
+    margin-left: 25px;
 }
 
 .info-ba-img img{
-    width: 100%;
+    width: 85%;
     height: 98%;
     border-radius: 20px;
 }
 
 .ba-labels{
     display: grid;
-    text-align: center;
+    text-align: end;
     font-weight: 600;
     align-content: space-evenly;
     user-select: none;
 }
 .ba-labels label{
-    list-style: none;
-    font-size: 16px;
+    font-size: 15px;
     padding: 3px 20px;
     margin: 2px;
     text-transform: uppercase;
+    position: relative;
+    bottom: 8px;
+    right: 10px;
 }
 
 .mt-label{
@@ -233,42 +228,50 @@ body{
 }
 
 .ba-assigned fieldset{
-    height: 240px;
-    width: 1035px;
+    height: 250px;
+    width: 850px;
     border: 2px solid #b5b0b0;
     border-radius: 10px;
-    overflow-y: overlay;
 }
 
 .ba-assigned fieldset legend{
-    float: none;
     margin-left: 10px;
     font-size: 18px;
-    width: 7.2%;
+    width: fit-content;
 }
 
 .ba-assigned fieldset table{
     border-collapse: collapse;
-    width: 98%;
+    width: 100%;
     margin: auto;
     border-right: 2px solid #f9fafb;
     border-left: 2px solid #f9fafb;
     user-select: none;
-    margin-top: 12px;
+}
+.ba-assigned fieldset table thead{
+    display: block;
+}
+
+.ba-assigned fieldset table tbody{
+    display: block;
+    height: 144px;
+    overflow-y: auto;
 }
 
 .ba-assigned fieldset table th{
+    width: 14%;
     background-color: rgb(110 187 231 / 58%);
     color: black;
-    padding: 10px 15px;
-    padding-right: 50px;
+    padding: 9px 15px;
+    
 }
 
 .ba-assigned fieldset table td{
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 14.5%;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .ic-tba{
@@ -279,17 +282,17 @@ body{
 .ba-area-tb{
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .ba-text-area{
-    margin-right: 235px;
+    margin-right: 286px;
     margin-bottom: 15px;
 }
 
 .ba-text-area textarea{
-    width: 700px;
-    height: 180px;
+    width: 500px;
+    height: 185px;
     padding: 20px;
     border-radius: 10px;
     outline: none;
@@ -306,7 +309,7 @@ body{
 .btn-ba-guardar{
     position: relative;
     top: 60px;
-    right: 195px;
+    right: 250px;
     height: 60px;
     width: 60px;
     display: flex;
@@ -314,21 +317,56 @@ body{
     justify-content: center;
 }
 
-#btn-ba-save{
+#ba-btn-save{
     padding: 7px 17px;
     border-radius: 18px;
     border: none;
     background-color: white;
     box-shadow: 1px 3px 8px 3px #b5b0b0;
     transition: .4s;
-    cursor: pointer;
 }
 
-#btn-ba-save:hover{
+#ba-btn-save:hover{
     background-color: rgb(110 187 231 / 58%);
 }
 
-/*Estilos para Tablet*/
+/*Estilos para Surface Pro 7*/
+
+@media screen and (max-width:1863px){
+    .section-asign{
+        width: 90%;
+        height: 93.5%;
+    }
+    .user-fieldset{
+        margin-right: 18px;
+    }
+
+    .user-details-ba{
+        margin-left: 18px;
+    }
+
+    .user-fieldset fieldset{
+        width: 305px;
+    }
+
+    .user-details-ba fieldset{
+        width: 500px;
+    }
+
+    .ba-assigned fieldset{
+        width: 850px;
+    }
+
+    .ba-text-area{
+        margin-right: 285px;
+    }
+
+    .btn-ba-guardar{
+        right: 242px !important;
+    }
+}
+
+/*Estilos para Tablet vertical*/
 
 @media screen and (max-width:912px) {
     .section-asign{
@@ -336,41 +374,53 @@ body{
     }
 
     .user-fieldset fieldset{
-        width: 350px;
-    }
-
-    .user-fieldset legend{
-        width: 29.6% !important;
+        width: 260px;
     }
 
     .user-details-ba fieldset{
-        width: 450px;
-    }
-    .user-details-ba legend{
-        width: 22.4% !important;
+        width: 360px;
     }
 
     .info-ba-img {
         margin-top: 10px;
     }
 
-    .info-ba-img img{
-        width: 61%;
-    }
     .ba-assigned fieldset{
-        width: 830px;
+        width: 660px;
     }
 
-    .ba-assigned fieldset table{width: 820px;}
+    .ba-assigned fieldset table th{
+        padding-right: 0;
+    }
 
     .ba-text-area {
-        margin-right: 80px;
+        margin-right: 190px !important;
     }
     .ba-text-area textarea{
-        width: 650px;
+        width: 400px !important;
     }
 
     .btn-ba-guardar{
-        right: 45px;
+        right: 155px !important;
     }
+}
+
+/* Estilos responsivos para ipad Mini */
+@media screen and (max-width:1200px) {
+
+    .section-asign{
+        width: 95% !important;
+    }
+
+    .ba-text-area{
+        margin-right: 336px;
+    }
+    .ba-text-area textarea{
+        width: 450px;
+    }
+
+    .btn-ba-guardar{
+        right: 292px ;
+    }
+    
 }

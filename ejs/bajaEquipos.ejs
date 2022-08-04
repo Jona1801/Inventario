@@ -1,0 +1,84 @@
+<%- contentFor ('heros')%>
+
+<link rel="stylesheet" href="css/bajaEquipos.css">
+<link rel="stylesheet" href="css/menu.css">
+
+<div id="menu"></div>
+
+<section>
+    <div class="contenedor-principal-be">
+        <div class="section-be">
+            <div class="cabecera-be">
+                <h1>Baja Equipos</h1>
+                <input id="btn-be-cerrar" type="button" value="X" class="botonCerrar-be">
+            </div>
+
+            <div class="content-be">
+                <!--Primer Contededor-->
+                <div class="content-be-1">
+                    <div class="content-be-be">
+                        <fieldset>
+                            <legend>Busqueda de Equipos</legend>
+
+                            <div class="busqueda-filtro-be">
+                                <select name="select-be" id="select-be-be">
+                                    <option value="0" selected="selected" hidden>Select Option</option>
+                                    <option value="1">Label</option>
+                                    <option value="2">Serial</option>
+                                    <option value="3">Nombre</option>
+                                </select>
+
+                                <input disabled type="text" id="input-be" placeholder="">
+                                <button disabled id="btn-be-search" title="Buscar"><img src="img/icons/search.svg" width="25px"></button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="content-be-info">
+                        <fieldset>
+                            <legend>Información Equipo</legend>
+
+                            <div class="content-labels-be">
+                                <div class="labels-be">
+                                    <label>Label</label>
+                                    <label>Descripción</label>
+                                    <label>Categoria</label>
+                                    <label>Marca</label>
+                                    <label>Modelo</label>
+                                    <label>Serial</label>
+                                    <label>Estado</label>
+                                    
+                                </div>
+                                <div class="labels-be-2">
+                                    <label id="lbl-be-label">100112</label>
+                                    <label id="lbl-be-descripcion">Laptops Dell</label>
+                                    <label id="lbl-be-categoria">Notebook</label>
+                                    <label id="lbl-be-marca">Dell</label>
+                                    <label id="lbl-be-modelo">Presicion</label>
+                                    <label id="lbl-be-serial">789456</label>
+                                    <label id="lbl-be-estado">Activo</label>
+                                    
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!--Segundo Contededor-->
+                <div class="content-be-2">
+                    <div class="content-be-ta">
+                        <textarea disabled id="textarea-be" cols="30" rows="10" placeholder="Motivo"></textarea>
+                    </div>
+
+                    <div class="content-btn-be">
+                        <button id="btn-be-save" title="Guardar"><img src="img/icons/box-arrow-up.svg" width="25px"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bajaEquipos.js"></script>
+</section>
