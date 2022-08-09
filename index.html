@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/shortcut-icon.ico">
+    <link rel="stylesheet" href="js/datetimepicker-master/jquery.datetimepicker.css">
     <link rel="stylesheet" href="css/prestamosPrueba.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
     <title>Generar Prestamos</title>
 </head>
 <body>
@@ -114,7 +114,7 @@
                             <legend>Buscar Equipo</legend>
 
                             <div class="search-gpn-be">
-                                <input disabled type="text" id="input-gpn-be" placeholder=" Label">
+                                <input disabled type="text" id="input-gpn-be" placeholder="Label" onkeypress="return soloNumeros(event)">
                                 <button id="btn-gpn-be">Buscar</button>
                             </div>
 
@@ -207,9 +207,9 @@
                                     </thead>
 
                                     <tbody id="tbody-acc">
-                                        <tr>
-                                            <td><button class="btn-acces" id="btn-add-acc" title="Agregar">+</button>
-                                            </td>
+                                        <tr id="tr-gpn-1">
+                                            <td id="td-col-1-1"></td>
+                                            <td id="td-col-2-1"><button class="btn-acces" id="add-gpn-1" onclick="agregarAcc(this)">+</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -223,13 +223,12 @@
                                 <legend>Periodo de Uso</legend>
 
                                 <div class="fechas-prestamos">
-                                    <input id="inicio-gpn-pu" type="datetime-local" title="Fecha Inicio">
-                                    <input id="final-gpn-pu" type="datetime-local" class="mt-acces" title="Fecha Final">
+                                    <input disabled id="inicio-gpn-pu" type="text" title="Fecha Inicio" value="mm/dd/yyyy --:-- --" required>
+                                    <input disabled id="final-gpn-pu" type="text" class="mt-acces" title="Fecha Final" value="mm/dd/yyyy --:-- --" required>
                                 </div>
                                 
                             </fieldset>  
 
-                            
                         </div>
 
                         <div class="agregar-prestamo">
@@ -242,6 +241,9 @@
         </div>
     </div>
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/datetimepicker-master/jquery.js"></script>
+    <script src="js/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
     <script src="js/prestamosPrueba.js"></script>
     
 </body>

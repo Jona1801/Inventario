@@ -14,8 +14,8 @@
     
 }
 .section-prestamos{
-    width: 90%;
-    height: 92vh;
+    width: 88%;
+    height: 90vh;
     margin: auto;
     border: 1px solid #b5b0b0;
     border-radius: 16px;
@@ -480,7 +480,6 @@
 }
 
 .table-accesorios table td{
-    padding: 9px 10px;
     padding-bottom: 10px;
     text-align: justify;
 }
@@ -974,7 +973,9 @@
     }
 
     .table-gpn-be label{
-        font-size: 11px;
+        font-size: 10px;
+        margin-left: 4px;
+        font-weight: 600;
     }
 
     .gpn-table label{
@@ -996,13 +997,14 @@
     }
 
     .table-accesorios fieldset legend{
-        margin-bottom: 0;
+        margin-bottom: 10;
         font-size: 16px;
     }
 
     .fechas-prestamos input {
         width: 130px;
-        padding: 7px 4px;
+        padding: 7px 6px;
+        font-size: 14px;
     }
 
     .acces-fechas-gpn{
@@ -1041,5 +1043,31 @@
     #table-gpn-iu::-webkit-scrollbar{
         width: 5px;
         height: 5px;
+    }
+
+    .select-gpn select{
+        padding: 9.5px 15px;
+    }
+
+    .gpn-table label{
+        font-weight: 600;
+        font-size: 10px;
+        margin-left: 4px;
+    }
+
+    /*Accesorios*/
+    .inp-add-acc{
+        padding: 4px 2px;
+        width: 90px;
+        font-size: 11px;
+    }
+
+    .inp-add-acc::placeholder{
+        font-size: 11px;
+    }
+
+    .btn-acces{
+        font-size: 14px;
+        padding: 3px 9px;
     }
 }
