@@ -52,6 +52,27 @@ function soloLetras(e) {
         }
 };
 
+/*Validacion de Letras*/
+function letrasNum(e) {
+
+    key = e.keyCode || e.which; 
+    teclado = String.fromCharCode(key).toLowerCase();
+    letras = " abcdefghijklmnñopqrstuvwxyz0123456789";
+    especiales = "8-37-38-46-164";
+    teclado_especial= false;
+
+        for(var i in especiales){
+            if(key==especiales[i]){
+                teclado_especial=true;break;
+            }
+        }
+
+        if (letras.indexOf(teclado)==-1 && !teclado_especial){
+            return false;
+
+        }
+};
+
 //Colores Disabled
 
 $('#input-gpn, #input-gpn-be').attr('disabled', true).css('background','#e9ecef');
@@ -59,8 +80,26 @@ $('#btn-search-gpn').attr('disabled', true).css('background','#e9ecef');
 $('#btn-gpn-be').attr('disabled', true).css('background', '#e9ecef');
 $('#btn-agregar-gpn').attr('disabled', true).css('background', '#e9ecef');
 $('#inicio-gpn-pu, #final-gpn-pu').attr('disabled', true).css('background', '#e9ecef');
+$('.btn-acces').attr('disabled', true).css('background', '#e9ecef');
 
 //Hovers
+$('#btn-search-gpn').hover(function(){
+    $('#btn-search-gpn').css('background','#6ebbe799', 'border', '1px solid #b5b0b0');
+    }, function(){
+        $('#btn-search-gpn').css('background','transparent', 'border', '1px solid #b5b0b0');
+});
+
+$('#btn-gpn-be').hover(function(){
+    $('#btn-gpn-be').css('background','#6ebbe799', 'border', '1px solid #b5b0b0');
+    }, function(){
+        $('#btn-gpn-be').css('background', 'transparent', 'border', '1px solid #b5b0b0');
+});
+
+$('#btn-agregar-gpn').hover(function(){
+    $('#btn-agregar-gpn').css('background','#6ebbe799', 'border', '1px solid #b5b0b0');
+    }, function(){
+        $('#btn-agregar-gpn').css('background', 'transparent', 'border', '1px solid #b5b0b0');
+});
 
 
 //Validacion de Boton Buscar Usuario
@@ -77,6 +116,7 @@ $('.search-gpn input').keyup(function(){
         $('#btn-search-gpn').prop('disabled', true).css('background','#e9ecef');
     }
 });
+
 
 //Función para comprobar los campos de texto
 function checkCampos(obj) {
@@ -115,6 +155,10 @@ $('.search-gpn-be input').keyup(function(){
     }
 });
 
+$('#btn-gpn-be').click(function(){
+    $('.btn-acces').prop('disabled', false).css('background','transparent');
+})
+
 //Script para Accesorios
 //Agregar Accesorios
 function agregarAcc(valor){
@@ -124,7 +168,7 @@ function agregarAcc(valor){
         {
             case "+":
             //VALIDACION PARA INPUT ACCESORIOS ---SE AGREGA LA FUNCION onkeypress="return letrasNum(event)" maxlength="50"
-            $("#td-col-1-"+ numero).append('<input type="text" class="inp-add-acc" id="valor-'+numero+'" onkeypress="return letrasNum(event)" maxlength="50" required placeholder="Escribe un accesorio" style="border-radius:10px; outline:none; padding:4px 15px; border:1px solid #b5b0b0;">');
+            $("#td-col-1-"+ numero).append('<input type="text" class="inp-add-acc" id="valor-'+numero+'" onkeypress="return letrasNum(event)" maxlength="50" required placeholder="Escribe un accesorio" style=" width:200px; border-radius:16px; outline:none; padding:8px 16px; border:1px solid #b5b0b0; font-size:15px;">');
             $('#'+ valor.id).text('s');
             $('#'+ valor.id).prop('disabled', true).css('background','#e9ecef');
             
@@ -167,7 +211,28 @@ function agregarAcc(valor){
         });
 
     });
+
+    $('#'+ valor.id).click(function(){
+        $('#inicio-gpn-pu').prop('disabled', false).css('background','transparent');
+        $('.inp-add-acc').prop('disabled', true);
+    
+    
+        $('#inicio-gpn-pu').click(function(){
+            $('#final-gpn-pu').prop('disabled', false).css('background', 'transparent');
+        });
+    
+        $('#final-gpn-pu').click(function(){
+            $('#btn-agregar-gpn').prop('disabled', false).css('background', 'transparent', 'border','1px solid #241f1fbf');
+        });
+                
+    });
 }
+
+$('#btn-agregar-gpn').click(function(){
+    alert('¡Prestamo agregado con Exito! :)')
+});
+
+
 
 //Validacion Inputs para fechas
 $('#inicio-gpn-pu').datetimepicker({
