@@ -222,7 +222,7 @@ function agregarAcc(valor){
         });
     
         $('#final-gpn-pu').click(function(){
-            $('#btn-agregar-gpn').prop('disabled', false).css('background', 'transparent', 'border','1px solid #241f1fbf');
+            $('#btn-agregar-gpn').prop('disabled', false).css('background', 'transparent');
         });
                 
     });
