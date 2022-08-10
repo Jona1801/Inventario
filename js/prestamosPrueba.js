@@ -80,7 +80,7 @@ $('#btn-search-gpn').attr('disabled', true).css('background','#e9ecef');
 $('#btn-gpn-be').attr('disabled', true).css('background', '#e9ecef');
 $('#btn-agregar-gpn').attr('disabled', true).css('background', '#e9ecef');
 $('#inicio-gpn-pu, #final-gpn-pu').attr('disabled', true).css('background', '#e9ecef');
-$('.btn-acces').attr('disabled', true).css('background', '#e9ecef');
+//$('.btn-acces').attr('disabled', true).css('background', '#e9ecef');
 
 //Hovers
 $('#btn-search-gpn').hover(function(){
